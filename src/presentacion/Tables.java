@@ -7,7 +7,7 @@ public class Tables {
 	 * 
 	 * @param st
 	 */
-	public void changeState(State st) {
+	public void changeState(Table t, State st) {
 		// TODO - implement Tables.changeState
 		throw new UnsupportedOperationException();
 	}
