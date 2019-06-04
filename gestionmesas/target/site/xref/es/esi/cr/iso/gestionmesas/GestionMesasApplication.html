@@ -22,26 +22,26 @@
 <a class="jxr_linenumber" name="L14" href="#L14">14</a>  @SpringBootApplication
 <a class="jxr_linenumber" name="L15" href="#L15">15</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../../../../es/esi/cr/iso/gestionmesas/GestionMesasApplication.html">GestionMesasApplication</a> <strong class="jxr_keyword">extends</strong> SpringBootServletInitializer {
 <a class="jxr_linenumber" name="L16" href="#L16">16</a>  
-<a class="jxr_linenumber" name="L17" href="#L17">17</a>  	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">void</strong> main(String[] args) <strong class="jxr_keyword">throws</strong> Exception {
-<a class="jxr_linenumber" name="L18" href="#L18">18</a>  		SpringApplication.run(GestionMesasApplication.<strong class="jxr_keyword">class</strong>, args);
-<a class="jxr_linenumber" name="L19" href="#L19">19</a>  	}
+<a class="jxr_linenumber" name="L17" href="#L17">17</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">void</strong> main(String[] args) <strong class="jxr_keyword">throws</strong> Exception {
+<a class="jxr_linenumber" name="L18" href="#L18">18</a>          SpringApplication.run(GestionMesasApplication.<strong class="jxr_keyword">class</strong>, args);
+<a class="jxr_linenumber" name="L19" href="#L19">19</a>      }
 <a class="jxr_linenumber" name="L20" href="#L20">20</a>  
-<a class="jxr_linenumber" name="L21" href="#L21">21</a>  	@Override
-<a class="jxr_linenumber" name="L22" href="#L22">22</a>  	<strong class="jxr_keyword">protected</strong> SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
-<a class="jxr_linenumber" name="L23" href="#L23">23</a>  		<strong class="jxr_keyword">return</strong> builder.sources(GestionMesasApplication.<strong class="jxr_keyword">class</strong>);
-<a class="jxr_linenumber" name="L24" href="#L24">24</a>  	}
-<a class="jxr_linenumber" name="L25" href="#L25">25</a>  	
-<a class="jxr_linenumber" name="L26" href="#L26">26</a>  	@Bean
-<a class="jxr_linenumber" name="L27" href="#L27">27</a>  	<strong class="jxr_keyword">public</strong> ServletContextInitializer servletContextCustomizer() {
-<a class="jxr_linenumber" name="L28" href="#L28">28</a>  		<strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> ServletContextInitializer() {
-<a class="jxr_linenumber" name="L29" href="#L29">29</a>  			@Override
-<a class="jxr_linenumber" name="L30" href="#L30">30</a>  			<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> onStartup(ServletContext servletContext) <strong class="jxr_keyword">throws</strong> ServletException {
-<a class="jxr_linenumber" name="L31" href="#L31">31</a>  				servletContext.setInitParameter(<span class="jxr_string">"primefaces.FONT_AWESOME"</span>, Boolean.toString(<strong class="jxr_keyword">true</strong>));
-<a class="jxr_linenumber" name="L32" href="#L32">32</a>  				servletContext.setInitParameter(<span class="jxr_string">"primefaces.THEME"</span>, <span class="jxr_string">"bootstrap"</span>);
-<a class="jxr_linenumber" name="L33" href="#L33">33</a>  				servletContext.setInitParameter(<span class="jxr_string">"javax.faces.STATE_SAVING_METHOD"</span>, <span class="jxr_string">"server"</span>);
-<a class="jxr_linenumber" name="L34" href="#L34">34</a>  			}
-<a class="jxr_linenumber" name="L35" href="#L35">35</a>  		};
-<a class="jxr_linenumber" name="L36" href="#L36">36</a>  	}
+<a class="jxr_linenumber" name="L21" href="#L21">21</a>      @Override
+<a class="jxr_linenumber" name="L22" href="#L22">22</a>      <strong class="jxr_keyword">protected</strong> SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
+<a class="jxr_linenumber" name="L23" href="#L23">23</a>          <strong class="jxr_keyword">return</strong> builder.sources(GestionMesasApplication.<strong class="jxr_keyword">class</strong>);
+<a class="jxr_linenumber" name="L24" href="#L24">24</a>      }
+<a class="jxr_linenumber" name="L25" href="#L25">25</a>  
+<a class="jxr_linenumber" name="L26" href="#L26">26</a>      @Bean
+<a class="jxr_linenumber" name="L27" href="#L27">27</a>      <strong class="jxr_keyword">public</strong> ServletContextInitializer servletContextCustomizer() {
+<a class="jxr_linenumber" name="L28" href="#L28">28</a>          <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> ServletContextInitializer() {
+<a class="jxr_linenumber" name="L29" href="#L29">29</a>              @Override
+<a class="jxr_linenumber" name="L30" href="#L30">30</a>              <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> onStartup(ServletContext servletContext) <strong class="jxr_keyword">throws</strong> ServletException {
+<a class="jxr_linenumber" name="L31" href="#L31">31</a>                  servletContext.setInitParameter(<span class="jxr_string">"primefaces.FONT_AWESOME"</span>, Boolean.toString(<strong class="jxr_keyword">true</strong>));
+<a class="jxr_linenumber" name="L32" href="#L32">32</a>                  servletContext.setInitParameter(<span class="jxr_string">"primefaces.THEME"</span>, <span class="jxr_string">"bootstrap"</span>);
+<a class="jxr_linenumber" name="L33" href="#L33">33</a>                  servletContext.setInitParameter(<span class="jxr_string">"javax.faces.STATE_SAVING_METHOD"</span>, <span class="jxr_string">"server"</span>);
+<a class="jxr_linenumber" name="L34" href="#L34">34</a>              }
+<a class="jxr_linenumber" name="L35" href="#L35">35</a>          };
+<a class="jxr_linenumber" name="L36" href="#L36">36</a>      }
 <a class="jxr_linenumber" name="L37" href="#L37">37</a>  }
 </pre>
 <hr/>

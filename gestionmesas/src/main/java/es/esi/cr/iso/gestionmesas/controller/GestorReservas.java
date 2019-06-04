@@ -26,98 +26,98 @@ import es.esi.cr.iso.gestionmesas.persistency.ReservaDao;
 @ViewScoped
 public class GestorReservas implements Serializable {
 
-	private static final long serialVersionUID = -6274199558088278143L;
+    private static final long serialVersionUID = -6274199558088278143L;
 
-	final static Logger LOGGER = LoggerFactory.getLogger(GestorReservas.class);
+    static final Logger LOGGER = LoggerFactory.getLogger(GestorReservas.class);
 
-	@Autowired
-	private ReservaDao reservaDao;
+    @Autowired
+    private ReservaDao reservaDao;
 
-	private Date fechaReserva;
-	private boolean comidaReserva;
-	private int turnoReserva;
-	private int mesaReserva;
-	private String nombreReserva;
+    private Date fechaReserva;
+    private boolean comidaReserva;
+    private int turnoReserva;
+    private int mesaReserva;
+    private String nombreReserva;
 
-	private List<Reserva> reservas;
+    private List<Reserva> reservas;
 
-	public GestorReservas() {
-		super();
-	}
-	
-	@PostConstruct
-	public void init() {
-		reload();
-	}
+    public GestorReservas() {
+        super();
+    }
 
-	private void reload() {
-		reservas = reservaDao.findAll();
-		fechaReserva = new Date();
-		comidaReserva = true;
-		turnoReserva = 0;
-		mesaReserva = 0;
-		nombreReserva = "";
+    @PostConstruct
+    public void init() {
+        reload();
+    }
 
-		RequestContext.getCurrentInstance().update("mainForm");
-	}
+    private void reload() {
+        reservas = reservaDao.findAll();
+        fechaReserva = new Date();
+        comidaReserva = true;
+        turnoReserva = 0;
+        mesaReserva = 0;
+        nombreReserva = "";
 
-	public void realizarReserva() {
-		Reserva reserva = new Reserva();
-		reserva.setFecha(new Timestamp(fechaReserva.getTime()));
-		reserva.setComida(comidaReserva ? ComidaEnum.COMIDA : ComidaEnum.CENA);
-		reserva.setTurno(TurnoEnum.values()[turnoReserva]);
-		reserva.setMesa(MesaEnum.values()[mesaReserva - 1]);
-		reserva.setNombre(nombreReserva);
-		//reservaDao.persist(reserva);
-		//reservas = reservaDao.findAll();		
-	}
-	
-	public Date getFechaReserva() {
-		return new Date(fechaReserva.getTime());
-	}
+        RequestContext.getCurrentInstance().update("mainForm");
+    }
 
-	public void setFechaReserva(Date fechaReserva) {
-		this.fechaReserva = new Date(fechaReserva.getTime());
-	}
+    public void realizarReserva() {
+        Reserva reserva = new Reserva();
+        reserva.setFecha(new Timestamp(fechaReserva.getTime()));
+        reserva.setComida(comidaReserva ? ComidaEnum.COMIDA : ComidaEnum.CENA);
+        reserva.setTurno(TurnoEnum.values()[turnoReserva]);
+        reserva.setMesa(MesaEnum.values()[mesaReserva - 1]);
+        reserva.setNombre(nombreReserva);
+        // reservaDao.persist(reserva);
+        // reservas = reservaDao.findAll();
+    }
 
-	public boolean isComidaReserva() {
-		return comidaReserva;
-	}
+    public Date getFechaReserva() {
+        return new Date(fechaReserva.getTime());
+    }
 
-	public void setComidaReserva(boolean comidaReserva) {
-		this.comidaReserva = comidaReserva;
-	}
+    public void setFechaReserva(Date fechaReserva) {
+        this.fechaReserva = new Date(fechaReserva.getTime());
+    }
 
-	public int getTurnoReserva() {
-		return turnoReserva;
-	}
+    public boolean isComidaReserva() {
+        return comidaReserva;
+    }
 
-	public void setTurnoReserva(int turnoReserva) {
-		this.turnoReserva = turnoReserva;
-	}
+    public void setComidaReserva(boolean comidaReserva) {
+        this.comidaReserva = comidaReserva;
+    }
 
-	public int getMesaReserva() {
-		return mesaReserva;
-	}
+    public int getTurnoReserva() {
+        return turnoReserva;
+    }
 
-	public void setMesaReserva(int mesaReserva) {
-		this.mesaReserva = mesaReserva;
-	}
+    public void setTurnoReserva(int turnoReserva) {
+        this.turnoReserva = turnoReserva;
+    }
 
-	public List<Reserva> getReservas() {
-		return reservas;
-	}
+    public int getMesaReserva() {
+        return mesaReserva;
+    }
 
-	public void setReservas(List<Reserva> reservas) {
-		this.reservas = reservas;
-	}
+    public void setMesaReserva(int mesaReserva) {
+        this.mesaReserva = mesaReserva;
+    }
 
-	public String getNombreReserva() {
-		return nombreReserva;
-	}
+    public List<Reserva> getReservas() {
+        return reservas;
+    }
 
-	public void setNombreReserva(String nombreReserva) {
-		this.nombreReserva = nombreReserva;
-	}
+    public void setReservas(List<Reserva> reservas) {
+        this.reservas = reservas;
+    }
+
+    public String getNombreReserva() {
+        return nombreReserva;
+    }
+
+    public void setNombreReserva(String nombreReserva) {
+        this.nombreReserva = nombreReserva;
+    }
 
 }

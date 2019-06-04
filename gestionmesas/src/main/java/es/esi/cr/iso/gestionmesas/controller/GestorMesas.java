@@ -29,142 +29,141 @@ public class GestorMesas implements Serializable {
 
     private static final long serialVersionUID = 1220451072138440791L;
 
-	final static Logger LOGGER = LoggerFactory.getLogger(GestorMesas.class);
+    static final Logger LOGGER = LoggerFactory.getLogger(GestorMesas.class);
 
-	@Autowired
-	private ServicioDao servicioDao;
-	
-	private EstadoEnum[] estados;
+    @Autowired
+    private ServicioDao servicioDao;
 
-	private Servicio servicioActivo;
+    private EstadoEnum[] estados;
 
-	private Date fechaServicio;
-	private boolean comidaServicio;
-	private int turnoServicio;
+    private Servicio servicioActivo;
 
-	private int[] ultimoEstadoMesa;
-	
-	public GestorMesas() {
-		super();
-	}
+    private Date fechaServicio;
+    private boolean comidaServicio;
+    private int turnoServicio;
 
-	@PostConstruct
-	public void init() {
-		reload();
-	}
+    private int[] ultimoEstadoMesa;
 
-	private void reload() {
-		setEstados(EstadoEnum.values());
-		fechaServicio = new Date();
-		comidaServicio = true;
-		turnoServicio = 0;
+    public GestorMesas() {
+        super();
+    }
 
-		ultimoEstadoMesa = new int[MesaEnum.values().length];
-		for (int i = 0; i < ultimoEstadoMesa.length; i++) {
-			ultimoEstadoMesa[i] = 0;
-		}
+    @PostConstruct
+    public void init() {
+        reload();
+    }
 
-		RequestContext.getCurrentInstance().update("mainForm");
-	}
-	
-	public void definirServicio() {
-		servicioActivo = new Servicio();
-		servicioActivo.setFecha(new Timestamp(fechaServicio.getTime()));
-		servicioActivo.setComida(comidaServicio ? ComidaEnum.COMIDA : ComidaEnum.CENA);
-		servicioActivo.setTurno(TurnoEnum.values()[turnoServicio]);
-		//servicioActivo = servicioDao.update(servicioActivo);
-		// TODO Comprobar si hay reservas para la fecha y servicio para marcar el estdo
-		// de cada mesa
-	}
+    private void reload() {
+        setEstados(EstadoEnum.values());
+        fechaServicio = new Date();
+        comidaServicio = true;
+        turnoServicio = 0;
 
-	public void definirEstado(int mesaId, int estadoId) {
-		MesaEnum mesa = MesaEnum.values()[mesaId - 1];
-		EstadoEnum estado = EstadoEnum.values()[estadoId];
-		Transaccion transaccion = new Transaccion();
-		transaccion.setServicio(servicioActivo);
-		transaccion.setFecha(new Timestamp(new Date().getTime()));
-		transaccion.setMesa(mesa);
-		transaccion.setEstado(estado);
-		servicioActivo.getTransacciones().add(transaccion);
-		//servicioActivo = servicioDao.update(servicioActivo);
-		ultimoEstadoMesa[mesaId - 1] = estadoId;
-	}
+        ultimoEstadoMesa = new int[MesaEnum.values().length];
+        for (int i = 0; i < ultimoEstadoMesa.length; i++) {
+            ultimoEstadoMesa[i] = 0;
+        }
 
-	public String getStyleClass(int mesaId, int estadoId) {
-		String estado;
-		
-		if (EstadoEnum.values().length - 1 == ultimoEstadoMesa[mesaId - 1] && estadoId==0) {
-			estado =  "estado-futuro";
-		}else if (estadoId > ultimoEstadoMesa[mesaId - 1]) {
-			estado = "estado-futuro";
-		} else if (estadoId < ultimoEstadoMesa[mesaId - 1]) {
-			estado = "estado-pasado";
-		} else {
-			estado = "estado-actual";
-		}
-		
-		return estado;
-	}
-	
-	public boolean isEnabled(int mesaId, int estadoId) {
-		boolean enabled;
-		
-		if (EstadoEnum.values().length - 1 == ultimoEstadoMesa[mesaId - 1] && estadoId==0) {
-			enabled = true;
-		} else {
-			enabled = servicioActivo != null && estadoId >= ultimoEstadoMesa[mesaId - 1]; 
-		}
-		
-		return enabled;
-	}
+        RequestContext.getCurrentInstance().update("mainForm");
+    }
 
-	public EstadoEnum[] getEstados() {
-		return estados.clone();
-	}
+    public void definirServicio() {
+        servicioActivo = new Servicio();
+        servicioActivo.setFecha(new Timestamp(fechaServicio.getTime()));
+        servicioActivo.setComida(comidaServicio ? ComidaEnum.COMIDA : ComidaEnum.CENA);
+        servicioActivo.setTurno(TurnoEnum.values()[turnoServicio]);
+        // servicioActivo = servicioDao.update(servicioActivo);
+        // TODO Comprobar si hay reservas para la fecha y servicio para marcar el estdo
+        // de cada mesa
+    }
 
-	public void setEstados(EstadoEnum[] estados) {
-		this.estados = estados.clone();
-	}
+    public void definirEstado(int mesaId, int estadoId) {
+        MesaEnum mesa = MesaEnum.values()[mesaId - 1];
+        EstadoEnum estado = EstadoEnum.values()[estadoId];
+        Transaccion transaccion = new Transaccion();
+        transaccion.setServicio(servicioActivo);
+        transaccion.setFecha(new Timestamp(new Date().getTime()));
+        transaccion.setMesa(mesa);
+        transaccion.setEstado(estado);
+        servicioActivo.getTransacciones().add(transaccion);
+        // servicioActivo = servicioDao.update(servicioActivo);
+        ultimoEstadoMesa[mesaId - 1] = estadoId;
+    }
 
-	public Servicio getServicioActivo() {
-		return servicioActivo;
-	}
+    public String getStyleClass(int mesaId, int estadoId) {
+        String estado;
 
-	public void setServicioActivo(Servicio servicioActivo) {
-		this.servicioActivo = servicioActivo;
-	}
+        if (EstadoEnum.values().length - 1 == ultimoEstadoMesa[mesaId - 1] && estadoId == 0) {
+            estado = "estado-futuro";
+        } else if (estadoId > ultimoEstadoMesa[mesaId - 1]) {
+            estado = "estado-futuro";
+        } else if (estadoId < ultimoEstadoMesa[mesaId - 1]) {
+            estado = "estado-pasado";
+        } else {
+            estado = "estado-actual";
+        }
 
-	public Date getFechaServicio() {
-		return new Date(fechaServicio.getTime());
-	}
+        return estado;
+    }
 
-	public void setFechaServicio(Date fechaServicio) {
-		this.fechaServicio = new Date(fechaServicio.getTime());
-	}
+    public boolean isEnabled(int mesaId, int estadoId) {
+        boolean enabled;
 
-	public boolean isComidaServicio() {
-		return comidaServicio;
-	}
+        if (EstadoEnum.values().length - 1 == ultimoEstadoMesa[mesaId - 1] && estadoId == 0) {
+            enabled = true;
+        } else {
+            enabled = servicioActivo != null && estadoId >= ultimoEstadoMesa[mesaId - 1];
+        }
 
-	public void setComidaServicio(boolean comidaServicio) {
-		this.comidaServicio = comidaServicio;
-	}
+        return enabled;
+    }
 
-	public int getTurnoServicio() {
-		return turnoServicio;
-	}
+    public EstadoEnum[] getEstados() {
+        return estados.clone();
+    }
 
-	public void setTurnoServicio(int turnoServicio) {
-		this.turnoServicio = turnoServicio;
-	}
-	
-    public void setUltimoEstadoMesa(int [] valor) {
-		this.ultimoEstadoMesa = valor.clone();
-	}
-    
-    public void setServicioDao(ServicioDao servDao)
-    {
-    	this.servicioDao = servDao;
+    public void setEstados(EstadoEnum[] estados) {
+        this.estados = estados.clone();
+    }
+
+    public Servicio getServicioActivo() {
+        return servicioActivo;
+    }
+
+    public void setServicioActivo(Servicio servicioActivo) {
+        this.servicioActivo = servicioActivo;
+    }
+
+    public Date getFechaServicio() {
+        return new Date(fechaServicio.getTime());
+    }
+
+    public void setFechaServicio(Date fechaServicio) {
+        this.fechaServicio = new Date(fechaServicio.getTime());
+    }
+
+    public boolean isComidaServicio() {
+        return comidaServicio;
+    }
+
+    public void setComidaServicio(boolean comidaServicio) {
+        this.comidaServicio = comidaServicio;
+    }
+
+    public int getTurnoServicio() {
+        return turnoServicio;
+    }
+
+    public void setTurnoServicio(int turnoServicio) {
+        this.turnoServicio = turnoServicio;
+    }
+
+    public void setUltimoEstadoMesa(int[] valor) {
+        this.ultimoEstadoMesa = valor.clone();
+    }
+
+    public void setServicioDao(ServicioDao servDao) {
+        this.servicioDao = servDao;
     }
 
 }

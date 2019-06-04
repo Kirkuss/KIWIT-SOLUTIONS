@@ -14,24 +14,24 @@ import org.springframework.context.annotation.Bean;
 @SpringBootApplication
 public class GestionMesasApplication extends SpringBootServletInitializer {
 
-	public static void main(String[] args) throws Exception {
-		SpringApplication.run(GestionMesasApplication.class, args);
-	}
+    public static void main(String[] args) throws Exception {
+        SpringApplication.run(GestionMesasApplication.class, args);
+    }
 
-	@Override
-	protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
-		return builder.sources(GestionMesasApplication.class);
-	}
-	
-	@Bean
-	public ServletContextInitializer servletContextCustomizer() {
-		return new ServletContextInitializer() {
-			@Override
-			public void onStartup(ServletContext servletContext) throws ServletException {
-				servletContext.setInitParameter("primefaces.FONT_AWESOME", Boolean.toString(true));
-				servletContext.setInitParameter("primefaces.THEME", "bootstrap");
-				servletContext.setInitParameter("javax.faces.STATE_SAVING_METHOD", "server");
-			}
-		};
-	}
+    @Override
+    protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
+        return builder.sources(GestionMesasApplication.class);
+    }
+
+    @Bean
+    public ServletContextInitializer servletContextCustomizer() {
+        return new ServletContextInitializer() {
+            @Override
+            public void onStartup(ServletContext servletContext) throws ServletException {
+                servletContext.setInitParameter("primefaces.FONT_AWESOME", Boolean.toString(true));
+                servletContext.setInitParameter("primefaces.THEME", "bootstrap");
+                servletContext.setInitParameter("javax.faces.STATE_SAVING_METHOD", "server");
+            }
+        };
+    }
 }

@@ -11,16 +11,16 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 public class MyWebMvcConfig {
 
     @Bean
-	public WebMvcConfigurerAdapter forwardToIndex() {
-		return new WebMvcConfigurerAdapter() {
-			@Override
-			public void addViewControllers(ViewControllerRegistry registry) {
-				registry.addViewController("/").setViewName("forward:/index.xhtml");
-				// registry.addViewController("/admin").setViewName("forward:/admin/index.html");
-				// registry.addViewController("/user").setViewName("forward:/user/index.html");
-			}
-		};
-	}
+    public WebMvcConfigurerAdapter forwardToIndex() {
+        return new WebMvcConfigurerAdapter() {
+            @Override
+            public void addViewControllers(ViewControllerRegistry registry) {
+                registry.addViewController("/").setViewName("forward:/index.xhtml");
+                // registry.addViewController("/admin").setViewName("forward:/admin/index.html");
+                // registry.addViewController("/user").setViewName("forward:/user/index.html");
+            }
+        };
+    }
 
     @Bean
     public ErrorPageFilter errorPageFilter() {
@@ -34,5 +34,5 @@ public class MyWebMvcConfig {
         filterRegBean.setEnabled(false);
         return filterRegBean;
     }
-    
+
 }
