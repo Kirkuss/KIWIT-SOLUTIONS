@@ -1,6 +1,6 @@
 package es.esi.cr.iso.gestionmesas.controller;
 
-import static org.junit.Assert.fail;
+import static org.junit.Assert.*;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

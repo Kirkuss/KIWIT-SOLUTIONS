@@ -1,2 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<pmd-cpd/>
+<pmd-cpd>
+   <duplication lines="23" tokens="127">
+      <file line="133"
+            path="C:\Users\Samuel\git\KiwIT Solutions\KIWIT-SOLUTIONS\gestionmesas\src\test\java\es\esi\cr\iso\gestionmesas\controller\TestGestorMesas.java"/>
+      <file line="155"
+            path="C:\Users\Samuel\git\KiwIT Solutions\KIWIT-SOLUTIONS\gestionmesas\src\test\java\es\esi\cr\iso\gestionmesas\controller\TestGestorMesas.java"/>
+      <codefragment><![CDATA[	public void TestDefinirEstado_2() throws ParseException
+	{
+		int[] vectorEstados = {0,0,0,0,0,0,0,0};
+		SimpleDateFormat format = new SimpleDateFormat("dd-mm-yyy");
+		Date date = format.parse("29-05-2019");
+		
+		gm.setUltimoEstadoMesa(vectorEstados);
+		gm.setFechaServicio(date);
+		gm.setComidaServicio(true);
+		gm.setTurnoServicio(0);
+		
+		try {
+			gm.definirServicio();
+			gm.definirEstado(4,7);
+		}catch(Exception e){
+			fail("Error expected");
+			System.out.println(new Throwable().getStackTrace()[0].getMethodName());
+			e.printStackTrace();
+		}
+	}
+	
+	@Test
+	public void TestDefinirEstado_3() throws ParseException]]></codefragment>
+   </duplication>
+</pmd-cpd>

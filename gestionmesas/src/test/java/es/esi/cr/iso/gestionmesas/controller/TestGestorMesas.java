@@ -16,20 +16,12 @@ import es.esi.cr.iso.gestionmesas.model.Servicio;
 public class TestGestorMesas {
 	
 	private GestorMesas gm;
-	private ServicioDao gdao;
 
 	@Before
 	public void setUp() throws Exception {
 		gm = new GestorMesas();
-		gdao = new ServicioDao();
 	}
 	
-/*----------------------------------------------------------------------------------------------*
- *																								*
- *  					TEST CASES FOR METHOD: definirServicio						  			*
- *   																							*
- *----------------------------------------------------------------------------------------------*/
-
 	@Test
 	public void TestDefinirServicio_1() throws Exception {
 		SimpleDateFormat format = new SimpleDateFormat("dd-mm-yyyy");
@@ -90,7 +82,7 @@ public class TestGestorMesas {
 		
 		try {
 			gm.definirServicio();
-			fail("Error expected");
+			fail("Error not expected");
 		}catch(Exception e) {
 			System.out.println(new Throwable().getStackTrace()[0].getMethodName());
 			e.printStackTrace();
@@ -107,19 +99,13 @@ public class TestGestorMesas {
 		
 		try {
 			gm.definirServicio();
-			fail("Error expected");
+			fail("Error not expected");
 		}catch(Exception e) {
 			System.out.println(new Throwable().getStackTrace()[0].getMethodName());
 			e.printStackTrace();
 		}
 	}
 	
-	
-/*----------------------------------------------------------------------------------------------*
- *																								*
- *  					TEST CASES FOR METHOD: definirEstado						  			*
- *   																							*
- *----------------------------------------------------------------------------------------------*/
 	
 	@Test
 	public void TestDefinirEstado_1() throws ParseException
@@ -132,12 +118,11 @@ public class TestGestorMesas {
 		gm.setFechaServicio(date);
 		gm.setComidaServicio(true);
 		gm.setTurnoServicio(0);
-		gm.setServicioDao(gdao);
 		
 		try {
 			gm.definirServicio();
 			gm.definirEstado(-15,-10);
-			fail("Error expected");
+			fail("Error not expected");
 		}catch(Exception e){
 			System.out.println(new Throwable().getStackTrace()[0].getMethodName());
 			e.printStackTrace();
@@ -155,7 +140,6 @@ public class TestGestorMesas {
 		gm.setFechaServicio(date);
 		gm.setComidaServicio(true);
 		gm.setTurnoServicio(0);
-		gm.setServicioDao(gdao);
 		
 		try {
 			gm.definirServicio();
@@ -178,13 +162,12 @@ public class TestGestorMesas {
 		gm.setFechaServicio(date);
 		gm.setComidaServicio(true);
 		gm.setTurnoServicio(0);
-		gm.setServicioDao(gdao);
 		
 		try {
 			gm.definirServicio();
 			gm.definirEstado(4,7);
-			fail("Error expected");
 		}catch(Exception e){
+		    fail("Error expected");
 			System.out.println(new Throwable().getStackTrace()[0].getMethodName());
 			e.printStackTrace();
 		}
@@ -201,7 +184,6 @@ public class TestGestorMesas {
 		gm.setFechaServicio(date);
 		gm.setComidaServicio(true);
 		gm.setTurnoServicio(0);
-		gm.setServicioDao(gdao);
 		
 		try {
 			gm.definirServicio();
@@ -212,13 +194,6 @@ public class TestGestorMesas {
 			e.printStackTrace();
 		}
 	}
-	
-/*----------------------------------------------------------------------------------------------*
- *																								*
- *  					TEST CASES FOR METHOD: getStyleClass									*
- *																								*
- *----------------------------------------------------------------------------------------------*/
-
 
 	@Test
     public void TestGetStyleClass_1()
@@ -280,11 +255,6 @@ public class TestGestorMesas {
         assertEquals(obtained, expected);
     }
    
-/*----------------------------------------------------------------------------------------------*
-*																								*
-*  					TEST CASES FOR METHOD: isEnabled											*
-*																								*
-*-----------------------------------------------------------------------------------------------*/
 	@Test
 	public void testIsEnabled_1() throws Exception {
 		int[] ultimoEstadoMesa = {8,0,0,0,0,0,0,0,0};
