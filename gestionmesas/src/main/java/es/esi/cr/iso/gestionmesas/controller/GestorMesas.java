@@ -43,7 +43,7 @@ public class GestorMesas implements Serializable {
 	private int turnoServicio;
 
 	private int[] ultimoEstadoMesa;
-
+	
 	public GestorMesas() {
 		super();
 	}
@@ -66,7 +66,7 @@ public class GestorMesas implements Serializable {
 
 		RequestContext.getCurrentInstance().update("mainForm");
 	}
-
+	
 	public void definirServicio() {
 		servicioActivo = new Servicio();
 		servicioActivo.setFecha(new Timestamp(fechaServicio.getTime()));
@@ -101,7 +101,7 @@ public class GestorMesas implements Serializable {
 			return "estado-actual";
 		}
 	}
-
+	
 	public boolean isEnabled(int mesaId, int estadoId) {
 		if (EstadoEnum.values().length - 1 == ultimoEstadoMesa[mesaId - 1] && estadoId==0) {
 			return true;

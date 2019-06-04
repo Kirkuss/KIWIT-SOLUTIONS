@@ -51,7 +51,7 @@
 <a class="jxr_linenumber" name="L43" href="#L43">43</a>  	<strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">int</strong> turnoServicio;
 <a class="jxr_linenumber" name="L44" href="#L44">44</a>  
 <a class="jxr_linenumber" name="L45" href="#L45">45</a>  	<strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">int</strong>[] ultimoEstadoMesa;
-<a class="jxr_linenumber" name="L46" href="#L46">46</a>  
+<a class="jxr_linenumber" name="L46" href="#L46">46</a>  	
 <a class="jxr_linenumber" name="L47" href="#L47">47</a>  	<strong class="jxr_keyword">public</strong> <a href="../../../../../../es/esi/cr/iso/gestionmesas/controller/GestorMesas.html">GestorMesas</a>() {
 <a class="jxr_linenumber" name="L48" href="#L48">48</a>  		<strong class="jxr_keyword">super</strong>();
 <a class="jxr_linenumber" name="L49" href="#L49">49</a>  	}
@@ -74,7 +74,7 @@
 <a class="jxr_linenumber" name="L66" href="#L66">66</a>  
 <a class="jxr_linenumber" name="L67" href="#L67">67</a>  		RequestContext.getCurrentInstance().update(<span class="jxr_string">"mainForm"</span>);
 <a class="jxr_linenumber" name="L68" href="#L68">68</a>  	}
-<a class="jxr_linenumber" name="L69" href="#L69">69</a>  
+<a class="jxr_linenumber" name="L69" href="#L69">69</a>  	
 <a class="jxr_linenumber" name="L70" href="#L70">70</a>  	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> definirServicio() {
 <a class="jxr_linenumber" name="L71" href="#L71">71</a>  		servicioActivo = <strong class="jxr_keyword">new</strong> <a href="../../../../../../es/esi/cr/iso/gestionmesas/model/Servicio.html">Servicio</a>();
 <a class="jxr_linenumber" name="L72" href="#L72">72</a>  		servicioActivo.setFecha(<strong class="jxr_keyword">new</strong> Timestamp(fechaServicio.getTime()));
@@ -109,7 +109,7 @@
 <a class="jxr_linenumber" name="L101" href="#L101">101</a> 			<strong class="jxr_keyword">return</strong> <span class="jxr_string">"estado-actual"</span>;
 <a class="jxr_linenumber" name="L102" href="#L102">102</a> 		}
 <a class="jxr_linenumber" name="L103" href="#L103">103</a> 	}
-<a class="jxr_linenumber" name="L104" href="#L104">104</a> 
+<a class="jxr_linenumber" name="L104" href="#L104">104</a> 	
 <a class="jxr_linenumber" name="L105" href="#L105">105</a> 	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">boolean</strong> isEnabled(<strong class="jxr_keyword">int</strong> mesaId, <strong class="jxr_keyword">int</strong> estadoId) {
 <a class="jxr_linenumber" name="L106" href="#L106">106</a> 		<strong class="jxr_keyword">if</strong> (EstadoEnum.values().length - 1 == ultimoEstadoMesa[mesaId - 1] &amp;&amp; estadoId==0) {
 <a class="jxr_linenumber" name="L107" href="#L107">107</a> 			<strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">true</strong>;

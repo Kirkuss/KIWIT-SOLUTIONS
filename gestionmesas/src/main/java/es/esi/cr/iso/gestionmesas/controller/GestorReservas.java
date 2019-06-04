@@ -44,7 +44,7 @@ public class GestorReservas implements Serializable {
 	public GestorReservas() {
 		super();
 	}
-
+	
 	@PostConstruct
 	public void init() {
 		reload();
@@ -71,7 +71,7 @@ public class GestorReservas implements Serializable {
 		//reservaDao.persist(reserva);
 		//reservas = reservaDao.findAll();		
 	}
-
+	
 	public Date getFechaReserva() {
 		return fechaReserva;
 	}

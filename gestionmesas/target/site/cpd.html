@@ -101,41 +101,7 @@
 <p>The following document contains the results of PMD's  <a class="externalLink" href="http://pmd.sourceforge.net/cpd.html">CPD</a> 5.6.1.</p></div>
 <div class="section">
 <h2><a name="Duplications"></a>Duplications</h2>
-<table border="0" class="bodyTable">
-<tr class="a">
-<th>File</th>
-<th>Line</th></tr>
-<tr class="b">
-<td>es\esi\cr\iso\gestionmesas\controller\TestGestorMesas.java</td>
-<td><a href="./xref-test/es/esi/cr/iso/gestionmesas/controller/TestGestorMesas.html#L133">133</a></td></tr>
-<tr class="a">
-<td>es\esi\cr\iso\gestionmesas\controller\TestGestorMesas.java</td>
-<td><a href="./xref-test/es/esi/cr/iso/gestionmesas/controller/TestGestorMesas.html#L155">155</a></td></tr>
-<tr class="b"><td colspan='2'>
-<div>
-<pre>	public void TestDefinirEstado_2() throws ParseException
-	{
-		int[] vectorEstados = {0,0,0,0,0,0,0,0};
-		SimpleDateFormat format = new SimpleDateFormat(&quot;dd-mm-yyy&quot;);
-		Date date = format.parse(&quot;29-05-2019&quot;);
-		
-		gm.setUltimoEstadoMesa(vectorEstados);
-		gm.setFechaServicio(date);
-		gm.setComidaServicio(true);
-		gm.setTurnoServicio(0);
-		
-		try {
-			gm.definirServicio();
-			gm.definirEstado(4,7);
-		}catch(Exception e){
-			fail(&quot;Error expected&quot;);
-			System.out.println(new Throwable().getStackTrace()[0].getMethodName());
-			e.printStackTrace();
-		}
-	}
-	
-	@Test
-	public void TestDefinirEstado_3() throws ParseException</pre></div></td></tr></table></div>
+<p>CPD found no problems in your source code.</p></div>
       </div>
     </div>
     <div class="clear">

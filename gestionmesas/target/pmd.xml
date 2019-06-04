@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<pmd version="5.6.1" timestamp="2019-06-04T02:05:20.389">
+<pmd version="5.6.1" timestamp="2019-06-04T12:35:32.897">
 <file name="C:\Users\Samuel\git\KiwIT Solutions\KIWIT-SOLUTIONS\gestionmesas\src\main\java\es\esi\cr\iso\gestionmesas\GestionMesasApplication.java">
 <violation beginline="17" endline="17" begincolumn="33" endcolumn="45" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas" class="GestionMesasApplication" method="main" variable="args" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
 Parameter 'args' is not assigned and could be declared final
@@ -516,310 +516,355 @@ Potential violation of Law of Demeter (object not created locally)
 </violation>
 </file>
 <file name="C:\Users\Samuel\git\KiwIT Solutions\KIWIT-SOLUTIONS\gestionmesas\src\test\java\es\esi\cr\iso\gestionmesas\controller\TestGestorMesas.java">
-<violation beginline="12" endline="12" begincolumn="1" endcolumn="57" rule="ImportFromSamePackage" ruleset="Import Statements" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/imports.html#ImportFromSamePackage" priority="3">
+<violation beginline="1" endline="494" begincolumn="1" endcolumn="3" rule="GodClass" ruleset="Design" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/design.html#GodClass" priority="3">
+Possible God class (WMC=51, ATFD=83, TCC=0.0)
+</violation>
+<violation beginline="8" endline="8" begincolumn="1" endcolumn="25" rule="UnusedImports" ruleset="Import Statements" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/imports.html#UnusedImports" priority="4">
+Avoid unused imports such as 'java.util.HashSet'
+</violation>
+<violation beginline="9" endline="9" begincolumn="1" endcolumn="21" rule="UnusedImports" ruleset="Import Statements" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/imports.html#UnusedImports" priority="4">
+Avoid unused imports such as 'java.util.Set'
+</violation>
+<violation beginline="14" endline="14" begincolumn="1" endcolumn="57" rule="ImportFromSamePackage" ruleset="Import Statements" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/imports.html#ImportFromSamePackage" priority="3">
 No need to import a type that lives in the same package
 </violation>
-<violation beginline="13" endline="13" begincolumn="1" endcolumn="58" rule="UnusedImports" ruleset="Import Statements" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/imports.html#UnusedImports" priority="4">
-Avoid unused imports such as 'es.esi.cr.iso.gestionmesas.persistency.ServicioDao'
+<violation beginline="16" endline="16" begincolumn="1" endcolumn="52" rule="UnusedImports" ruleset="Import Statements" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/imports.html#UnusedImports" priority="4">
+Avoid unused imports such as 'es.esi.cr.iso.gestionmesas.model.Transaccion'
 </violation>
-<violation beginline="16" endline="312" begincolumn="8" endcolumn="1" rule="AtLeastOneConstructor" ruleset="Controversial" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/controversial.html#AtLeastOneConstructor" priority="3">
+<violation beginline="18" endline="494" begincolumn="8" endcolumn="1" rule="AtLeastOneConstructor" ruleset="Controversial" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/controversial.html#AtLeastOneConstructor" priority="3">
 Each class should declare at least one constructor
 </violation>
-<violation beginline="18" endline="18" begincolumn="29" endcolumn="30" rule="ShortVariable" ruleset="Naming" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" variable="gm" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+<violation beginline="20" endline="20" begincolumn="29" endcolumn="30" rule="ShortVariable" ruleset="Naming" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" variable="gm" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
 Avoid variables with short names like gm
 </violation>
-<violation beginline="26" endline="26" begincolumn="21" endcolumn="43" rule="MethodNamingConventions" ruleset="Naming" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="TestDefinirServicio_1" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#MethodNamingConventions" priority="1">
+<violation beginline="28" endline="28" begincolumn="21" endcolumn="43" rule="MethodNamingConventions" ruleset="Naming" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testDefinirServicio_1" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#MethodNamingConventions" priority="1">
 Method names should not contain underscores
 </violation>
-<violation beginline="26" endline="26" begincolumn="21" endcolumn="43" rule="MethodNamingConventions" ruleset="Naming" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="TestDefinirServicio_1" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#MethodNamingConventions" priority="1">
-Method names should not start with capital letters
-</violation>
-<violation beginline="27" endline="27" begincolumn="17" endcolumn="76" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="TestDefinirServicio_1" variable="format" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+<violation beginline="29" endline="29" begincolumn="17" endcolumn="76" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testDefinirServicio_1" variable="format" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
 Local variable 'format' could be declared final
 </violation>
-<violation beginline="27" endline="27" begincolumn="43" endcolumn="76" rule="SimpleDateFormatNeedsLocale" ruleset="Design" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="TestDefinirServicio_1" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/design.html#SimpleDateFormatNeedsLocale" priority="3">
+<violation beginline="29" endline="29" begincolumn="43" endcolumn="76" rule="SimpleDateFormatNeedsLocale" ruleset="Design" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testDefinirServicio_1" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/design.html#SimpleDateFormatNeedsLocale" priority="3">
 When instantiating a SimpleDateFormat object, specify a Locale
 </violation>
-<violation beginline="28" endline="28" begincolumn="17" endcolumn="54" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="TestDefinirServicio_1" variable="date" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+<violation beginline="30" endline="30" begincolumn="17" endcolumn="54" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testDefinirServicio_1" variable="date" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
 Local variable 'date' could be declared final
 </violation>
-<violation beginline="42" endline="42" begincolumn="21" endcolumn="43" rule="MethodNamingConventions" ruleset="Naming" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="TestDefinirServicio_2" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#MethodNamingConventions" priority="1">
+<violation beginline="46" endline="46" begincolumn="21" endcolumn="43" rule="MethodNamingConventions" ruleset="Naming" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testDefinirServicio_2" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#MethodNamingConventions" priority="1">
 Method names should not contain underscores
 </violation>
-<violation beginline="42" endline="42" begincolumn="21" endcolumn="43" rule="MethodNamingConventions" ruleset="Naming" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="TestDefinirServicio_2" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#MethodNamingConventions" priority="1">
-Method names should not start with capital letters
-</violation>
-<violation beginline="43" endline="43" begincolumn="17" endcolumn="76" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="TestDefinirServicio_2" variable="format" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+<violation beginline="47" endline="47" begincolumn="17" endcolumn="76" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testDefinirServicio_2" variable="format" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
 Local variable 'format' could be declared final
 </violation>
-<violation beginline="43" endline="43" begincolumn="43" endcolumn="76" rule="SimpleDateFormatNeedsLocale" ruleset="Design" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="TestDefinirServicio_2" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/design.html#SimpleDateFormatNeedsLocale" priority="3">
+<violation beginline="47" endline="47" begincolumn="43" endcolumn="76" rule="SimpleDateFormatNeedsLocale" ruleset="Design" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testDefinirServicio_2" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/design.html#SimpleDateFormatNeedsLocale" priority="3">
 When instantiating a SimpleDateFormat object, specify a Locale
 </violation>
-<violation beginline="44" endline="44" begincolumn="17" endcolumn="54" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="TestDefinirServicio_2" variable="date" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+<violation beginline="48" endline="48" begincolumn="17" endcolumn="54" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testDefinirServicio_2" variable="date" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
 Local variable 'date' could be declared final
 </violation>
-<violation beginline="59" endline="59" begincolumn="21" endcolumn="43" rule="MethodNamingConventions" ruleset="Naming" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="TestDefinirServicio_3" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#MethodNamingConventions" priority="1">
+<violation beginline="64" endline="64" begincolumn="21" endcolumn="43" rule="MethodNamingConventions" ruleset="Naming" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testDefinirServicio_3" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#MethodNamingConventions" priority="1">
 Method names should not contain underscores
 </violation>
-<violation beginline="59" endline="59" begincolumn="21" endcolumn="43" rule="MethodNamingConventions" ruleset="Naming" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="TestDefinirServicio_3" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#MethodNamingConventions" priority="1">
-Method names should not start with capital letters
-</violation>
-<violation beginline="60" endline="60" begincolumn="17" endcolumn="76" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="TestDefinirServicio_3" variable="format" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+<violation beginline="65" endline="65" begincolumn="17" endcolumn="76" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testDefinirServicio_3" variable="format" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
 Local variable 'format' could be declared final
 </violation>
-<violation beginline="60" endline="60" begincolumn="43" endcolumn="76" rule="SimpleDateFormatNeedsLocale" ruleset="Design" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="TestDefinirServicio_3" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/design.html#SimpleDateFormatNeedsLocale" priority="3">
+<violation beginline="65" endline="65" begincolumn="43" endcolumn="76" rule="SimpleDateFormatNeedsLocale" ruleset="Design" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testDefinirServicio_3" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/design.html#SimpleDateFormatNeedsLocale" priority="3">
 When instantiating a SimpleDateFormat object, specify a Locale
 </violation>
-<violation beginline="61" endline="61" begincolumn="17" endcolumn="54" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="TestDefinirServicio_3" variable="date" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+<violation beginline="66" endline="66" begincolumn="17" endcolumn="54" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testDefinirServicio_3" variable="date" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
 Local variable 'date' could be declared final
 </violation>
-<violation beginline="76" endline="76" begincolumn="21" endcolumn="43" rule="MethodNamingConventions" ruleset="Naming" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="TestDefinirServicio_4" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#MethodNamingConventions" priority="1">
+<violation beginline="82" endline="82" begincolumn="21" endcolumn="43" rule="MethodNamingConventions" ruleset="Naming" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testDefinirServicio_4" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#MethodNamingConventions" priority="1">
 Method names should not contain underscores
 </violation>
-<violation beginline="76" endline="76" begincolumn="21" endcolumn="43" rule="MethodNamingConventions" ruleset="Naming" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="TestDefinirServicio_4" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#MethodNamingConventions" priority="1">
-Method names should not start with capital letters
+<violation beginline="98" endline="98" begincolumn="21" endcolumn="43" rule="MethodNamingConventions" ruleset="Naming" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testDefinirServicio_5" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#MethodNamingConventions" priority="1">
+Method names should not contain underscores
 </violation>
-<violation beginline="77" endline="77" begincolumn="17" endcolumn="76" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="TestDefinirServicio_4" variable="format" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+<violation beginline="99" endline="99" begincolumn="17" endcolumn="76" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testDefinirServicio_5" variable="format" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
 Local variable 'format' could be declared final
 </violation>
-<violation beginline="77" endline="77" begincolumn="43" endcolumn="76" rule="SimpleDateFormatNeedsLocale" ruleset="Design" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="TestDefinirServicio_4" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/design.html#SimpleDateFormatNeedsLocale" priority="3">
+<violation beginline="99" endline="99" begincolumn="43" endcolumn="76" rule="SimpleDateFormatNeedsLocale" ruleset="Design" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testDefinirServicio_5" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/design.html#SimpleDateFormatNeedsLocale" priority="3">
 When instantiating a SimpleDateFormat object, specify a Locale
 </violation>
-<violation beginline="78" endline="78" begincolumn="17" endcolumn="54" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="TestDefinirServicio_4" variable="date" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+<violation beginline="100" endline="100" begincolumn="17" endcolumn="54" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testDefinirServicio_5" variable="date" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
 Local variable 'date' could be declared final
 </violation>
-<violation beginline="93" endline="93" begincolumn="21" endcolumn="43" rule="MethodNamingConventions" ruleset="Naming" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="TestDefinirServicio_5" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#MethodNamingConventions" priority="1">
+<violation beginline="116" endline="116" begincolumn="21" endcolumn="41" rule="MethodNamingConventions" ruleset="Naming" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testDefinirEstado_1" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#MethodNamingConventions" priority="1">
 Method names should not contain underscores
 </violation>
-<violation beginline="93" endline="93" begincolumn="21" endcolumn="43" rule="MethodNamingConventions" ruleset="Naming" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="TestDefinirServicio_5" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#MethodNamingConventions" priority="1">
-Method names should not start with capital letters
+<violation beginline="117" endline="117" begincolumn="17" endcolumn="56" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testDefinirEstado_1" variable="vectorEstados" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+Local variable 'vectorEstados' could be declared final
 </violation>
-<violation beginline="94" endline="94" begincolumn="17" endcolumn="76" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="TestDefinirServicio_5" variable="format" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+<violation beginline="120" endline="120" begincolumn="17" endcolumn="76" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testDefinirEstado_1" variable="format" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
 Local variable 'format' could be declared final
 </violation>
-<violation beginline="94" endline="94" begincolumn="43" endcolumn="76" rule="SimpleDateFormatNeedsLocale" ruleset="Design" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="TestDefinirServicio_5" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/design.html#SimpleDateFormatNeedsLocale" priority="3">
+<violation beginline="120" endline="120" begincolumn="43" endcolumn="76" rule="SimpleDateFormatNeedsLocale" ruleset="Design" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testDefinirEstado_1" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/design.html#SimpleDateFormatNeedsLocale" priority="3">
 When instantiating a SimpleDateFormat object, specify a Locale
 </violation>
-<violation beginline="95" endline="95" begincolumn="17" endcolumn="54" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="TestDefinirServicio_5" variable="date" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+<violation beginline="121" endline="121" begincolumn="17" endcolumn="54" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testDefinirEstado_1" variable="date" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
 Local variable 'date' could be declared final
 </violation>
-<violation beginline="111" endline="111" begincolumn="21" endcolumn="41" rule="MethodNamingConventions" ruleset="Naming" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="TestDefinirEstado_1" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#MethodNamingConventions" priority="1">
+<violation beginline="138" endline="138" begincolumn="21" endcolumn="41" rule="MethodNamingConventions" ruleset="Naming" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testDefinirEstado_2" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#MethodNamingConventions" priority="1">
 Method names should not contain underscores
 </violation>
-<violation beginline="111" endline="111" begincolumn="21" endcolumn="41" rule="MethodNamingConventions" ruleset="Naming" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="TestDefinirEstado_1" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#MethodNamingConventions" priority="1">
-Method names should not start with capital letters
-</violation>
-<violation beginline="113" endline="113" begincolumn="17" endcolumn="55" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="TestDefinirEstado_1" variable="vectorEstados" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+<violation beginline="139" endline="139" begincolumn="17" endcolumn="56" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testDefinirEstado_2" variable="vectorEstados" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
 Local variable 'vectorEstados' could be declared final
 </violation>
-<violation beginline="114" endline="114" begincolumn="17" endcolumn="75" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="TestDefinirEstado_1" variable="format" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+<violation beginline="142" endline="142" begincolumn="17" endcolumn="76" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testDefinirEstado_2" variable="format" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
 Local variable 'format' could be declared final
 </violation>
-<violation beginline="114" endline="114" begincolumn="43" endcolumn="75" rule="SimpleDateFormatNeedsLocale" ruleset="Design" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="TestDefinirEstado_1" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/design.html#SimpleDateFormatNeedsLocale" priority="3">
+<violation beginline="142" endline="142" begincolumn="43" endcolumn="76" rule="SimpleDateFormatNeedsLocale" ruleset="Design" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testDefinirEstado_2" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/design.html#SimpleDateFormatNeedsLocale" priority="3">
 When instantiating a SimpleDateFormat object, specify a Locale
 </violation>
-<violation beginline="115" endline="115" begincolumn="17" endcolumn="54" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="TestDefinirEstado_1" variable="date" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+<violation beginline="143" endline="143" begincolumn="17" endcolumn="54" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testDefinirEstado_2" variable="date" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
 Local variable 'date' could be declared final
 </violation>
-<violation beginline="133" endline="133" begincolumn="21" endcolumn="41" rule="MethodNamingConventions" ruleset="Naming" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="TestDefinirEstado_2" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#MethodNamingConventions" priority="1">
+<violation beginline="160" endline="160" begincolumn="21" endcolumn="41" rule="MethodNamingConventions" ruleset="Naming" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testDefinirEstado_3" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#MethodNamingConventions" priority="1">
 Method names should not contain underscores
 </violation>
-<violation beginline="133" endline="133" begincolumn="21" endcolumn="41" rule="MethodNamingConventions" ruleset="Naming" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="TestDefinirEstado_2" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#MethodNamingConventions" priority="1">
-Method names should not start with capital letters
-</violation>
-<violation beginline="135" endline="135" begincolumn="17" endcolumn="55" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="TestDefinirEstado_2" variable="vectorEstados" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+<violation beginline="161" endline="161" begincolumn="17" endcolumn="56" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testDefinirEstado_3" variable="vectorEstados" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
 Local variable 'vectorEstados' could be declared final
 </violation>
-<violation beginline="136" endline="136" begincolumn="17" endcolumn="75" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="TestDefinirEstado_2" variable="format" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+<violation beginline="164" endline="164" begincolumn="17" endcolumn="76" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testDefinirEstado_3" variable="format" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
 Local variable 'format' could be declared final
 </violation>
-<violation beginline="136" endline="136" begincolumn="43" endcolumn="75" rule="SimpleDateFormatNeedsLocale" ruleset="Design" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="TestDefinirEstado_2" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/design.html#SimpleDateFormatNeedsLocale" priority="3">
+<violation beginline="164" endline="164" begincolumn="43" endcolumn="76" rule="SimpleDateFormatNeedsLocale" ruleset="Design" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testDefinirEstado_3" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/design.html#SimpleDateFormatNeedsLocale" priority="3">
 When instantiating a SimpleDateFormat object, specify a Locale
 </violation>
-<violation beginline="137" endline="137" begincolumn="17" endcolumn="54" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="TestDefinirEstado_2" variable="date" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+<violation beginline="165" endline="165" begincolumn="17" endcolumn="54" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testDefinirEstado_3" variable="date" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
 Local variable 'date' could be declared final
 </violation>
-<violation beginline="155" endline="155" begincolumn="21" endcolumn="41" rule="MethodNamingConventions" ruleset="Naming" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="TestDefinirEstado_3" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#MethodNamingConventions" priority="1">
+<violation beginline="182" endline="182" begincolumn="21" endcolumn="41" rule="MethodNamingConventions" ruleset="Naming" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testDefinirEstado_4" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#MethodNamingConventions" priority="1">
 Method names should not contain underscores
 </violation>
-<violation beginline="155" endline="155" begincolumn="21" endcolumn="41" rule="MethodNamingConventions" ruleset="Naming" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="TestDefinirEstado_3" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#MethodNamingConventions" priority="1">
-Method names should not start with capital letters
-</violation>
-<violation beginline="157" endline="157" begincolumn="17" endcolumn="55" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="TestDefinirEstado_3" variable="vectorEstados" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+<violation beginline="183" endline="183" begincolumn="17" endcolumn="56" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testDefinirEstado_4" variable="vectorEstados" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
 Local variable 'vectorEstados' could be declared final
 </violation>
-<violation beginline="158" endline="158" begincolumn="17" endcolumn="75" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="TestDefinirEstado_3" variable="format" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+<violation beginline="186" endline="186" begincolumn="17" endcolumn="76" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testDefinirEstado_4" variable="format" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
 Local variable 'format' could be declared final
 </violation>
-<violation beginline="158" endline="158" begincolumn="43" endcolumn="75" rule="SimpleDateFormatNeedsLocale" ruleset="Design" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="TestDefinirEstado_3" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/design.html#SimpleDateFormatNeedsLocale" priority="3">
+<violation beginline="186" endline="186" begincolumn="43" endcolumn="76" rule="SimpleDateFormatNeedsLocale" ruleset="Design" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testDefinirEstado_4" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/design.html#SimpleDateFormatNeedsLocale" priority="3">
 When instantiating a SimpleDateFormat object, specify a Locale
 </violation>
-<violation beginline="159" endline="159" begincolumn="17" endcolumn="54" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="TestDefinirEstado_3" variable="date" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+<violation beginline="187" endline="187" begincolumn="17" endcolumn="54" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testDefinirEstado_4" variable="date" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
 Local variable 'date' could be declared final
 </violation>
-<violation beginline="177" endline="177" begincolumn="21" endcolumn="41" rule="MethodNamingConventions" ruleset="Naming" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="TestDefinirEstado_4" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#MethodNamingConventions" priority="1">
+<violation beginline="204" endline="204" begincolumn="21" endcolumn="41" rule="MethodNamingConventions" ruleset="Naming" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testDefinirEstado_5" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#MethodNamingConventions" priority="1">
 Method names should not contain underscores
 </violation>
-<violation beginline="177" endline="177" begincolumn="21" endcolumn="41" rule="MethodNamingConventions" ruleset="Naming" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="TestDefinirEstado_4" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#MethodNamingConventions" priority="1">
-Method names should not start with capital letters
-</violation>
-<violation beginline="179" endline="179" begincolumn="17" endcolumn="55" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="TestDefinirEstado_4" variable="vectorEstados" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+<violation beginline="205" endline="205" begincolumn="17" endcolumn="56" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testDefinirEstado_5" variable="vectorEstados" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
 Local variable 'vectorEstados' could be declared final
 </violation>
-<violation beginline="180" endline="180" begincolumn="17" endcolumn="75" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="TestDefinirEstado_4" variable="format" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+<violation beginline="208" endline="208" begincolumn="17" endcolumn="76" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testDefinirEstado_5" variable="format" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
 Local variable 'format' could be declared final
 </violation>
-<violation beginline="180" endline="180" begincolumn="43" endcolumn="75" rule="SimpleDateFormatNeedsLocale" ruleset="Design" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="TestDefinirEstado_4" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/design.html#SimpleDateFormatNeedsLocale" priority="3">
+<violation beginline="208" endline="208" begincolumn="43" endcolumn="76" rule="SimpleDateFormatNeedsLocale" ruleset="Design" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testDefinirEstado_5" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/design.html#SimpleDateFormatNeedsLocale" priority="3">
 When instantiating a SimpleDateFormat object, specify a Locale
 </violation>
-<violation beginline="181" endline="181" begincolumn="17" endcolumn="54" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="TestDefinirEstado_4" variable="date" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+<violation beginline="209" endline="209" begincolumn="17" endcolumn="54" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testDefinirEstado_5" variable="date" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
 Local variable 'date' could be declared final
 </violation>
-<violation beginline="199" endline="199" begincolumn="17" endcolumn="37" rule="MethodNamingConventions" ruleset="Naming" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="TestGetStyleClass_1" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#MethodNamingConventions" priority="1">
+<violation beginline="226" endline="226" begincolumn="21" endcolumn="41" rule="MethodNamingConventions" ruleset="Naming" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testGetStyleClass_1" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#MethodNamingConventions" priority="1">
 Method names should not contain underscores
 </violation>
-<violation beginline="199" endline="199" begincolumn="17" endcolumn="37" rule="MethodNamingConventions" ruleset="Naming" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="TestGetStyleClass_1" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#MethodNamingConventions" priority="1">
-Method names should not start with capital letters
-</violation>
-<violation beginline="201" endline="201" begincolumn="9" endcolumn="47" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="TestGetStyleClass_1" variable="vectorEstados" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+<violation beginline="227" endline="227" begincolumn="17" endcolumn="72" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testGetStyleClass_1" variable="vectorEstados" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
 Local variable 'vectorEstados' could be declared final
 </violation>
-<violation beginline="203" endline="203" begincolumn="9" endcolumn="47" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="TestGetStyleClass_1" variable="obtained" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
-Local variable 'obtained' could be declared final
-</violation>
-<violation beginline="204" endline="204" begincolumn="9" endcolumn="41" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="TestGetStyleClass_1" variable="expected" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
-Local variable 'expected' could be declared final
-</violation>
-<violation beginline="209" endline="209" begincolumn="17" endcolumn="37" rule="MethodNamingConventions" ruleset="Naming" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="TestGetStyleClass_2" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#MethodNamingConventions" priority="1">
+<violation beginline="240" endline="240" begincolumn="21" endcolumn="41" rule="MethodNamingConventions" ruleset="Naming" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testGetStyleClass_2" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#MethodNamingConventions" priority="1">
 Method names should not contain underscores
 </violation>
-<violation beginline="209" endline="209" begincolumn="17" endcolumn="37" rule="MethodNamingConventions" ruleset="Naming" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="TestGetStyleClass_2" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#MethodNamingConventions" priority="1">
-Method names should not start with capital letters
-</violation>
-<violation beginline="211" endline="211" begincolumn="9" endcolumn="47" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="TestGetStyleClass_2" variable="vectorEstados" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+<violation beginline="241" endline="241" begincolumn="17" endcolumn="56" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testGetStyleClass_2" variable="vectorEstados" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
 Local variable 'vectorEstados' could be declared final
 </violation>
-<violation beginline="213" endline="213" begincolumn="9" endcolumn="47" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="TestGetStyleClass_2" variable="obtained" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
-Local variable 'obtained' could be declared final
-</violation>
-<violation beginline="214" endline="214" begincolumn="9" endcolumn="41" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="TestGetStyleClass_2" variable="expected" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
-Local variable 'expected' could be declared final
-</violation>
-<violation beginline="219" endline="219" begincolumn="17" endcolumn="37" rule="MethodNamingConventions" ruleset="Naming" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="TestGetStyleClass_3" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#MethodNamingConventions" priority="1">
+<violation beginline="254" endline="254" begincolumn="21" endcolumn="41" rule="MethodNamingConventions" ruleset="Naming" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testGetStyleClass_3" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#MethodNamingConventions" priority="1">
 Method names should not contain underscores
 </violation>
-<violation beginline="219" endline="219" begincolumn="17" endcolumn="37" rule="MethodNamingConventions" ruleset="Naming" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="TestGetStyleClass_3" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#MethodNamingConventions" priority="1">
-Method names should not start with capital letters
-</violation>
-<violation beginline="221" endline="221" begincolumn="9" endcolumn="47" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="TestGetStyleClass_3" variable="vectorEstados" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+<violation beginline="255" endline="255" begincolumn="17" endcolumn="64" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testGetStyleClass_3" variable="vectorEstados" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
 Local variable 'vectorEstados' could be declared final
 </violation>
-<violation beginline="223" endline="223" begincolumn="9" endcolumn="47" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="TestGetStyleClass_3" variable="obtained" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
-Local variable 'obtained' could be declared final
-</violation>
-<violation beginline="224" endline="224" begincolumn="9" endcolumn="41" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="TestGetStyleClass_3" variable="expected" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
-Local variable 'expected' could be declared final
-</violation>
-<violation beginline="229" endline="229" begincolumn="17" endcolumn="37" rule="MethodNamingConventions" ruleset="Naming" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="TestGetStyleClass_4" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#MethodNamingConventions" priority="1">
+<violation beginline="268" endline="268" begincolumn="21" endcolumn="41" rule="MethodNamingConventions" ruleset="Naming" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testGetStyleClass_4" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#MethodNamingConventions" priority="1">
 Method names should not contain underscores
 </violation>
-<violation beginline="229" endline="229" begincolumn="17" endcolumn="37" rule="MethodNamingConventions" ruleset="Naming" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="TestGetStyleClass_4" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#MethodNamingConventions" priority="1">
-Method names should not start with capital letters
-</violation>
-<violation beginline="231" endline="231" begincolumn="9" endcolumn="47" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="TestGetStyleClass_4" variable="vectorEstados" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+<violation beginline="269" endline="269" begincolumn="17" endcolumn="56" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testGetStyleClass_4" variable="vectorEstados" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
 Local variable 'vectorEstados' could be declared final
 </violation>
-<violation beginline="233" endline="233" begincolumn="9" endcolumn="47" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="TestGetStyleClass_4" variable="obtained" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
-Local variable 'obtained' could be declared final
-</violation>
-<violation beginline="234" endline="234" begincolumn="9" endcolumn="41" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="TestGetStyleClass_4" variable="expected" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
-Local variable 'expected' could be declared final
-</violation>
-<violation beginline="239" endline="239" begincolumn="17" endcolumn="37" rule="MethodNamingConventions" ruleset="Naming" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="TestGetStyleClass_5" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#MethodNamingConventions" priority="1">
+<violation beginline="282" endline="282" begincolumn="21" endcolumn="41" rule="MethodNamingConventions" ruleset="Naming" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testGetStyleClass_5" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#MethodNamingConventions" priority="1">
 Method names should not contain underscores
 </violation>
-<violation beginline="239" endline="239" begincolumn="17" endcolumn="37" rule="MethodNamingConventions" ruleset="Naming" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="TestGetStyleClass_5" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#MethodNamingConventions" priority="1">
-Method names should not start with capital letters
-</violation>
-<violation beginline="241" endline="241" begincolumn="9" endcolumn="47" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="TestGetStyleClass_5" variable="vectorEstados" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+<violation beginline="283" endline="283" begincolumn="17" endcolumn="56" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testGetStyleClass_5" variable="vectorEstados" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
 Local variable 'vectorEstados' could be declared final
 </violation>
-<violation beginline="243" endline="243" begincolumn="9" endcolumn="47" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="TestGetStyleClass_5" variable="obtained" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
-Local variable 'obtained' could be declared final
-</violation>
-<violation beginline="244" endline="244" begincolumn="9" endcolumn="41" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="TestGetStyleClass_5" variable="expected" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
-Local variable 'expected' could be declared final
-</violation>
-<violation beginline="249" endline="249" begincolumn="17" endcolumn="37" rule="MethodNamingConventions" ruleset="Naming" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="TestGetStyleClass_6" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#MethodNamingConventions" priority="1">
+<violation beginline="296" endline="296" begincolumn="21" endcolumn="37" rule="MethodNamingConventions" ruleset="Naming" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testIsEnabled_1" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#MethodNamingConventions" priority="1">
 Method names should not contain underscores
 </violation>
-<violation beginline="249" endline="249" begincolumn="17" endcolumn="37" rule="MethodNamingConventions" ruleset="Naming" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="TestGetStyleClass_6" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#MethodNamingConventions" priority="1">
-Method names should not start with capital letters
-</violation>
-<violation beginline="251" endline="251" begincolumn="9" endcolumn="47" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="TestGetStyleClass_6" variable="vectorEstados" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+<violation beginline="297" endline="297" begincolumn="17" endcolumn="72" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testIsEnabled_1" variable="vectorEstados" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
 Local variable 'vectorEstados' could be declared final
 </violation>
-<violation beginline="253" endline="253" begincolumn="9" endcolumn="47" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="TestGetStyleClass_6" variable="obtained" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
-Local variable 'obtained' could be declared final
-</violation>
-<violation beginline="254" endline="254" begincolumn="9" endcolumn="41" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="TestGetStyleClass_6" variable="expected" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
-Local variable 'expected' could be declared final
-</violation>
-<violation beginline="259" endline="259" begincolumn="21" endcolumn="37" rule="MethodNamingConventions" ruleset="Naming" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testIsEnabled_1" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#MethodNamingConventions" priority="1">
-Method names should not contain underscores
-</violation>
-<violation beginline="260" endline="260" begincolumn="17" endcolumn="60" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testIsEnabled_1" variable="ultimoEstadoMesa" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
-Local variable 'ultimoEstadoMesa' could be declared final
-</violation>
-<violation beginline="264" endline="264" begincolumn="17" endcolumn="50" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testIsEnabled_1" variable="servicio" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+<violation beginline="300" endline="300" begincolumn="17" endcolumn="50" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testIsEnabled_1" variable="servicio" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
 Local variable 'servicio' could be declared final
 </violation>
-<violation beginline="267" endline="267" begincolumn="17" endcolumn="39" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testIsEnabled_1" variable="esperado" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
-Local variable 'esperado' could be declared final
-</violation>
-<violation beginline="268" endline="268" begincolumn="17" endcolumn="53" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testIsEnabled_1" variable="obtenido" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
-Local variable 'obtenido' could be declared final
-</violation>
-<violation beginline="274" endline="274" begincolumn="21" endcolumn="37" rule="MethodNamingConventions" ruleset="Naming" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testIsEnabled_2" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#MethodNamingConventions" priority="1">
+<violation beginline="313" endline="313" begincolumn="21" endcolumn="37" rule="MethodNamingConventions" ruleset="Naming" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testIsEnabled_2" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#MethodNamingConventions" priority="1">
 Method names should not contain underscores
 </violation>
-<violation beginline="275" endline="275" begincolumn="17" endcolumn="60" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testIsEnabled_2" variable="ultimoEstadoMesa" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
-Local variable 'ultimoEstadoMesa' could be declared final
+<violation beginline="314" endline="314" begincolumn="17" endcolumn="56" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testIsEnabled_2" variable="vectorEstados" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+Local variable 'vectorEstados' could be declared final
 </violation>
-<violation beginline="279" endline="279" begincolumn="17" endcolumn="50" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testIsEnabled_2" variable="servicio" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+<violation beginline="317" endline="317" begincolumn="17" endcolumn="50" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testIsEnabled_2" variable="servicio" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
 Local variable 'servicio' could be declared final
 </violation>
-<violation beginline="282" endline="282" begincolumn="17" endcolumn="40" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testIsEnabled_2" variable="esperado" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
-Local variable 'esperado' could be declared final
-</violation>
-<violation beginline="283" endline="283" begincolumn="17" endcolumn="53" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testIsEnabled_2" variable="obtenido" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
-Local variable 'obtenido' could be declared final
-</violation>
-<violation beginline="288" endline="288" begincolumn="21" endcolumn="37" rule="MethodNamingConventions" ruleset="Naming" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testIsEnabled_3" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#MethodNamingConventions" priority="1">
+<violation beginline="330" endline="330" begincolumn="21" endcolumn="37" rule="MethodNamingConventions" ruleset="Naming" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testIsEnabled_3" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#MethodNamingConventions" priority="1">
 Method names should not contain underscores
 </violation>
-<violation beginline="289" endline="289" begincolumn="17" endcolumn="60" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testIsEnabled_3" variable="ultimoEstadoMesa" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
-Local variable 'ultimoEstadoMesa' could be declared final
+<violation beginline="331" endline="331" begincolumn="17" endcolumn="64" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testIsEnabled_3" variable="vectorEstados" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+Local variable 'vectorEstados' could be declared final
 </violation>
-<violation beginline="293" endline="293" begincolumn="17" endcolumn="50" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testIsEnabled_3" variable="servicio" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+<violation beginline="334" endline="334" begincolumn="17" endcolumn="50" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testIsEnabled_3" variable="servicio" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
 Local variable 'servicio' could be declared final
 </violation>
-<violation beginline="296" endline="296" begincolumn="17" endcolumn="39" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testIsEnabled_3" variable="esperado" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
-Local variable 'esperado' could be declared final
-</violation>
-<violation beginline="297" endline="297" begincolumn="17" endcolumn="53" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testIsEnabled_3" variable="obtenido" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
-Local variable 'obtenido' could be declared final
-</violation>
-<violation beginline="302" endline="302" begincolumn="21" endcolumn="37" rule="MethodNamingConventions" ruleset="Naming" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testIsEnabled_4" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#MethodNamingConventions" priority="1">
+<violation beginline="347" endline="347" begincolumn="21" endcolumn="37" rule="MethodNamingConventions" ruleset="Naming" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testIsEnabled_4" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#MethodNamingConventions" priority="1">
 Method names should not contain underscores
 </violation>
-<violation beginline="303" endline="303" begincolumn="17" endcolumn="60" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testIsEnabled_4" variable="ultimoEstadoMesa" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+<violation beginline="348" endline="348" begincolumn="17" endcolumn="56" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testIsEnabled_4" variable="vectorEstados" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+Local variable 'vectorEstados' could be declared final
+</violation>
+<violation beginline="351" endline="351" begincolumn="17" endcolumn="50" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testIsEnabled_4" variable="servicio" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+Local variable 'servicio' could be declared final
+</violation>
+<violation beginline="364" endline="364" begincolumn="21" endcolumn="37" rule="MethodNamingConventions" ruleset="Naming" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testIsEnabled_5" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#MethodNamingConventions" priority="1">
+Method names should not contain underscores
+</violation>
+<violation beginline="365" endline="365" begincolumn="17" endcolumn="56" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testIsEnabled_5" variable="vectorEstados" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+Local variable 'vectorEstados' could be declared final
+</violation>
+<violation beginline="368" endline="368" begincolumn="17" endcolumn="50" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testIsEnabled_5" variable="servicio" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+Local variable 'servicio' could be declared final
+</violation>
+<violation beginline="381" endline="381" begincolumn="17" endcolumn="39" rule="MethodNamingConventions" ruleset="Naming" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testGetStyleClass_cd1" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#MethodNamingConventions" priority="1">
+Method names should not contain underscores
+</violation>
+<violation beginline="383" endline="383" begincolumn="9" endcolumn="47" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testGetStyleClass_cd1" variable="vectorEstados" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+Local variable 'vectorEstados' could be declared final
+</violation>
+<violation beginline="385" endline="385" begincolumn="9" endcolumn="47" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testGetStyleClass_cd1" variable="obtained" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+Local variable 'obtained' could be declared final
+</violation>
+<violation beginline="386" endline="386" begincolumn="9" endcolumn="41" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testGetStyleClass_cd1" variable="expected" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+Local variable 'expected' could be declared final
+</violation>
+<violation beginline="391" endline="391" begincolumn="17" endcolumn="39" rule="MethodNamingConventions" ruleset="Naming" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testGetStyleClass_cd2" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#MethodNamingConventions" priority="1">
+Method names should not contain underscores
+</violation>
+<violation beginline="393" endline="393" begincolumn="9" endcolumn="47" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testGetStyleClass_cd2" variable="vectorEstados" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+Local variable 'vectorEstados' could be declared final
+</violation>
+<violation beginline="395" endline="395" begincolumn="9" endcolumn="47" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testGetStyleClass_cd2" variable="obtained" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+Local variable 'obtained' could be declared final
+</violation>
+<violation beginline="396" endline="396" begincolumn="9" endcolumn="41" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testGetStyleClass_cd2" variable="expected" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+Local variable 'expected' could be declared final
+</violation>
+<violation beginline="401" endline="401" begincolumn="17" endcolumn="39" rule="MethodNamingConventions" ruleset="Naming" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testGetStyleClass_cd3" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#MethodNamingConventions" priority="1">
+Method names should not contain underscores
+</violation>
+<violation beginline="403" endline="403" begincolumn="9" endcolumn="47" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testGetStyleClass_cd3" variable="vectorEstados" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+Local variable 'vectorEstados' could be declared final
+</violation>
+<violation beginline="405" endline="405" begincolumn="9" endcolumn="47" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testGetStyleClass_cd3" variable="obtained" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+Local variable 'obtained' could be declared final
+</violation>
+<violation beginline="406" endline="406" begincolumn="9" endcolumn="41" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testGetStyleClass_cd3" variable="expected" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+Local variable 'expected' could be declared final
+</violation>
+<violation beginline="411" endline="411" begincolumn="17" endcolumn="39" rule="MethodNamingConventions" ruleset="Naming" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testGetStyleClass_cd4" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#MethodNamingConventions" priority="1">
+Method names should not contain underscores
+</violation>
+<violation beginline="413" endline="413" begincolumn="9" endcolumn="47" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testGetStyleClass_cd4" variable="vectorEstados" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+Local variable 'vectorEstados' could be declared final
+</violation>
+<violation beginline="415" endline="415" begincolumn="9" endcolumn="47" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testGetStyleClass_cd4" variable="obtained" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+Local variable 'obtained' could be declared final
+</violation>
+<violation beginline="416" endline="416" begincolumn="9" endcolumn="41" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testGetStyleClass_cd4" variable="expected" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+Local variable 'expected' could be declared final
+</violation>
+<violation beginline="421" endline="421" begincolumn="17" endcolumn="39" rule="MethodNamingConventions" ruleset="Naming" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testGetStyleClass_cd5" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#MethodNamingConventions" priority="1">
+Method names should not contain underscores
+</violation>
+<violation beginline="423" endline="423" begincolumn="9" endcolumn="47" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testGetStyleClass_cd5" variable="vectorEstados" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+Local variable 'vectorEstados' could be declared final
+</violation>
+<violation beginline="425" endline="425" begincolumn="9" endcolumn="47" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testGetStyleClass_cd5" variable="obtained" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+Local variable 'obtained' could be declared final
+</violation>
+<violation beginline="426" endline="426" begincolumn="9" endcolumn="41" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testGetStyleClass_cd5" variable="expected" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+Local variable 'expected' could be declared final
+</violation>
+<violation beginline="431" endline="431" begincolumn="17" endcolumn="39" rule="MethodNamingConventions" ruleset="Naming" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testGetStyleClass_cd6" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#MethodNamingConventions" priority="1">
+Method names should not contain underscores
+</violation>
+<violation beginline="433" endline="433" begincolumn="9" endcolumn="47" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testGetStyleClass_cd6" variable="vectorEstados" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+Local variable 'vectorEstados' could be declared final
+</violation>
+<violation beginline="435" endline="435" begincolumn="9" endcolumn="47" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testGetStyleClass_cd6" variable="obtained" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+Local variable 'obtained' could be declared final
+</violation>
+<violation beginline="436" endline="436" begincolumn="9" endcolumn="41" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testGetStyleClass_cd6" variable="expected" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+Local variable 'expected' could be declared final
+</violation>
+<violation beginline="441" endline="441" begincolumn="21" endcolumn="39" rule="MethodNamingConventions" ruleset="Naming" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testIsEnabled_cd1" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#MethodNamingConventions" priority="1">
+Method names should not contain underscores
+</violation>
+<violation beginline="442" endline="442" begincolumn="17" endcolumn="60" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testIsEnabled_cd1" variable="ultimoEstadoMesa" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
 Local variable 'ultimoEstadoMesa' could be declared final
 </violation>
-<violation beginline="307" endline="307" begincolumn="17" endcolumn="40" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testIsEnabled_4" variable="esperado" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+<violation beginline="446" endline="446" begincolumn="17" endcolumn="50" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testIsEnabled_cd1" variable="servicio" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+Local variable 'servicio' could be declared final
+</violation>
+<violation beginline="449" endline="449" begincolumn="17" endcolumn="39" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testIsEnabled_cd1" variable="esperado" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
 Local variable 'esperado' could be declared final
 </violation>
-<violation beginline="308" endline="308" begincolumn="17" endcolumn="53" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testIsEnabled_4" variable="obtenido" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+<violation beginline="450" endline="450" begincolumn="17" endcolumn="53" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testIsEnabled_cd1" variable="obtenido" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+Local variable 'obtenido' could be declared final
+</violation>
+<violation beginline="456" endline="456" begincolumn="21" endcolumn="39" rule="MethodNamingConventions" ruleset="Naming" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testIsEnabled_cd2" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#MethodNamingConventions" priority="1">
+Method names should not contain underscores
+</violation>
+<violation beginline="457" endline="457" begincolumn="17" endcolumn="60" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testIsEnabled_cd2" variable="ultimoEstadoMesa" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+Local variable 'ultimoEstadoMesa' could be declared final
+</violation>
+<violation beginline="461" endline="461" begincolumn="17" endcolumn="50" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testIsEnabled_cd2" variable="servicio" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+Local variable 'servicio' could be declared final
+</violation>
+<violation beginline="464" endline="464" begincolumn="17" endcolumn="40" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testIsEnabled_cd2" variable="esperado" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+Local variable 'esperado' could be declared final
+</violation>
+<violation beginline="465" endline="465" begincolumn="17" endcolumn="53" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testIsEnabled_cd2" variable="obtenido" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+Local variable 'obtenido' could be declared final
+</violation>
+<violation beginline="470" endline="470" begincolumn="21" endcolumn="39" rule="MethodNamingConventions" ruleset="Naming" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testIsEnabled_cd3" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#MethodNamingConventions" priority="1">
+Method names should not contain underscores
+</violation>
+<violation beginline="471" endline="471" begincolumn="17" endcolumn="60" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testIsEnabled_cd3" variable="ultimoEstadoMesa" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+Local variable 'ultimoEstadoMesa' could be declared final
+</violation>
+<violation beginline="475" endline="475" begincolumn="17" endcolumn="50" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testIsEnabled_cd3" variable="servicio" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+Local variable 'servicio' could be declared final
+</violation>
+<violation beginline="478" endline="478" begincolumn="17" endcolumn="39" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testIsEnabled_cd3" variable="esperado" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+Local variable 'esperado' could be declared final
+</violation>
+<violation beginline="479" endline="479" begincolumn="17" endcolumn="53" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testIsEnabled_cd3" variable="obtenido" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+Local variable 'obtenido' could be declared final
+</violation>
+<violation beginline="484" endline="484" begincolumn="21" endcolumn="39" rule="MethodNamingConventions" ruleset="Naming" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testIsEnabled_cd4" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#MethodNamingConventions" priority="1">
+Method names should not contain underscores
+</violation>
+<violation beginline="485" endline="485" begincolumn="17" endcolumn="60" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testIsEnabled_cd4" variable="ultimoEstadoMesa" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+Local variable 'ultimoEstadoMesa' could be declared final
+</violation>
+<violation beginline="489" endline="489" begincolumn="17" endcolumn="40" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testIsEnabled_cd4" variable="esperado" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+Local variable 'esperado' could be declared final
+</violation>
+<violation beginline="490" endline="490" begincolumn="17" endcolumn="53" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorMesas" method="testIsEnabled_cd4" variable="obtenido" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
 Local variable 'obtenido' could be declared final
 </violation>
 </file>
@@ -827,155 +872,62 @@ Local variable 'obtenido' could be declared final
 <violation beginline="12" endline="12" begincolumn="1" endcolumn="60" rule="ImportFromSamePackage" ruleset="Import Statements" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorReservas" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/imports.html#ImportFromSamePackage" priority="3">
 No need to import a type that lives in the same package
 </violation>
-<violation beginline="14" endline="221" begincolumn="8" endcolumn="1" rule="AtLeastOneConstructor" ruleset="Controversial" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorReservas" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/controversial.html#AtLeastOneConstructor" priority="3">
+<violation beginline="14" endline="121" begincolumn="8" endcolumn="1" rule="AtLeastOneConstructor" ruleset="Controversial" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorReservas" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/controversial.html#AtLeastOneConstructor" priority="3">
 Each class should declare at least one constructor
 </violation>
 <violation beginline="16" endline="16" begincolumn="32" endcolumn="33" rule="ShortVariable" ruleset="Naming" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorReservas" variable="gr" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
 Avoid variables with short names like gr
 </violation>
-<violation beginline="24" endline="47" begincolumn="9" endcolumn="9" rule="DefaultPackage" ruleset="Controversial" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorReservas" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/controversial.html#DefaultPackage" priority="3">
-Use explicit scoping instead of the default package private level
-</violation>
-<violation beginline="25" endline="25" begincolumn="14" endcolumn="36" rule="MethodNamingConventions" ruleset="Naming" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorReservas" method="TestRealizarReserva_1" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#MethodNamingConventions" priority="1">
+<violation beginline="24" endline="24" begincolumn="21" endcolumn="43" rule="MethodNamingConventions" ruleset="Naming" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorReservas" method="testRealizarReserva_1" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#MethodNamingConventions" priority="1">
 Method names should not contain underscores
 </violation>
-<violation beginline="25" endline="25" begincolumn="14" endcolumn="36" rule="MethodNamingConventions" ruleset="Naming" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorReservas" method="TestRealizarReserva_1" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#MethodNamingConventions" priority="1">
-Method names should not start with capital letters
-</violation>
-<violation beginline="29" endline="29" begincolumn="17" endcolumn="75" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorReservas" method="TestRealizarReserva_1" variable="format" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+<violation beginline="25" endline="25" begincolumn="17" endcolumn="76" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorReservas" method="testRealizarReserva_1" variable="format" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
 Local variable 'format' could be declared final
 </violation>
-<violation beginline="29" endline="29" begincolumn="43" endcolumn="75" rule="SimpleDateFormatNeedsLocale" ruleset="Design" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorReservas" method="TestRealizarReserva_1" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/design.html#SimpleDateFormatNeedsLocale" priority="3">
+<violation beginline="25" endline="25" begincolumn="43" endcolumn="76" rule="SimpleDateFormatNeedsLocale" ruleset="Design" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorReservas" method="testRealizarReserva_1" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/design.html#SimpleDateFormatNeedsLocale" priority="3">
 When instantiating a SimpleDateFormat object, specify a Locale
 </violation>
-<violation beginline="30" endline="30" begincolumn="17" endcolumn="54" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorReservas" method="TestRealizarReserva_1" variable="date" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+<violation beginline="26" endline="26" begincolumn="17" endcolumn="54" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorReservas" method="testRealizarReserva_1" variable="date" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
 Local variable 'date' could be declared final
 </violation>
-<violation beginline="49" endline="72" begincolumn="9" endcolumn="9" rule="DefaultPackage" ruleset="Controversial" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorReservas" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/controversial.html#DefaultPackage" priority="3">
-Use explicit scoping instead of the default package private level
-</violation>
-<violation beginline="50" endline="50" begincolumn="14" endcolumn="36" rule="MethodNamingConventions" ruleset="Naming" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorReservas" method="TestRealizarReserva_2" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#MethodNamingConventions" priority="1">
+<violation beginline="44" endline="44" begincolumn="21" endcolumn="43" rule="MethodNamingConventions" ruleset="Naming" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorReservas" method="testRealizarReserva_2" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#MethodNamingConventions" priority="1">
 Method names should not contain underscores
 </violation>
-<violation beginline="50" endline="50" begincolumn="14" endcolumn="36" rule="MethodNamingConventions" ruleset="Naming" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorReservas" method="TestRealizarReserva_2" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#MethodNamingConventions" priority="1">
-Method names should not start with capital letters
-</violation>
-<violation beginline="54" endline="54" begincolumn="17" endcolumn="75" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorReservas" method="TestRealizarReserva_2" variable="format" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+<violation beginline="45" endline="45" begincolumn="17" endcolumn="76" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorReservas" method="testRealizarReserva_2" variable="format" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
 Local variable 'format' could be declared final
 </violation>
-<violation beginline="54" endline="54" begincolumn="43" endcolumn="75" rule="SimpleDateFormatNeedsLocale" ruleset="Design" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorReservas" method="TestRealizarReserva_2" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/design.html#SimpleDateFormatNeedsLocale" priority="3">
+<violation beginline="45" endline="45" begincolumn="43" endcolumn="76" rule="SimpleDateFormatNeedsLocale" ruleset="Design" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorReservas" method="testRealizarReserva_2" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/design.html#SimpleDateFormatNeedsLocale" priority="3">
 When instantiating a SimpleDateFormat object, specify a Locale
 </violation>
-<violation beginline="55" endline="55" begincolumn="17" endcolumn="54" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorReservas" method="TestRealizarReserva_2" variable="date" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+<violation beginline="46" endline="46" begincolumn="17" endcolumn="54" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorReservas" method="testRealizarReserva_2" variable="date" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
 Local variable 'date' could be declared final
 </violation>
-<violation beginline="74" endline="97" begincolumn="9" endcolumn="9" rule="DefaultPackage" ruleset="Controversial" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorReservas" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/controversial.html#DefaultPackage" priority="3">
-Use explicit scoping instead of the default package private level
-</violation>
-<violation beginline="75" endline="75" begincolumn="14" endcolumn="36" rule="MethodNamingConventions" ruleset="Naming" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorReservas" method="TestRealizarReserva_3" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#MethodNamingConventions" priority="1">
+<violation beginline="64" endline="64" begincolumn="21" endcolumn="43" rule="MethodNamingConventions" ruleset="Naming" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorReservas" method="testRealizarReserva_3" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#MethodNamingConventions" priority="1">
 Method names should not contain underscores
 </violation>
-<violation beginline="75" endline="75" begincolumn="14" endcolumn="36" rule="MethodNamingConventions" ruleset="Naming" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorReservas" method="TestRealizarReserva_3" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#MethodNamingConventions" priority="1">
-Method names should not start with capital letters
-</violation>
-<violation beginline="79" endline="79" begincolumn="17" endcolumn="75" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorReservas" method="TestRealizarReserva_3" variable="format" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+<violation beginline="65" endline="65" begincolumn="17" endcolumn="76" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorReservas" method="testRealizarReserva_3" variable="format" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
 Local variable 'format' could be declared final
 </violation>
-<violation beginline="79" endline="79" begincolumn="43" endcolumn="75" rule="SimpleDateFormatNeedsLocale" ruleset="Design" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorReservas" method="TestRealizarReserva_3" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/design.html#SimpleDateFormatNeedsLocale" priority="3">
+<violation beginline="65" endline="65" begincolumn="43" endcolumn="76" rule="SimpleDateFormatNeedsLocale" ruleset="Design" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorReservas" method="testRealizarReserva_3" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/design.html#SimpleDateFormatNeedsLocale" priority="3">
 When instantiating a SimpleDateFormat object, specify a Locale
 </violation>
-<violation beginline="80" endline="80" begincolumn="17" endcolumn="54" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorReservas" method="TestRealizarReserva_3" variable="date" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+<violation beginline="66" endline="66" begincolumn="17" endcolumn="54" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorReservas" method="testRealizarReserva_3" variable="date" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
 Local variable 'date' could be declared final
 </violation>
-<violation beginline="99" endline="122" begincolumn="9" endcolumn="9" rule="DefaultPackage" ruleset="Controversial" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorReservas" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/controversial.html#DefaultPackage" priority="3">
-Use explicit scoping instead of the default package private level
-</violation>
-<violation beginline="100" endline="100" begincolumn="14" endcolumn="36" rule="MethodNamingConventions" ruleset="Naming" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorReservas" method="TestRealizarReserva_4" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#MethodNamingConventions" priority="1">
+<violation beginline="84" endline="84" begincolumn="21" endcolumn="43" rule="MethodNamingConventions" ruleset="Naming" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorReservas" method="testRealizarReserva_4" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#MethodNamingConventions" priority="1">
 Method names should not contain underscores
 </violation>
-<violation beginline="100" endline="100" begincolumn="14" endcolumn="36" rule="MethodNamingConventions" ruleset="Naming" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorReservas" method="TestRealizarReserva_4" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#MethodNamingConventions" priority="1">
-Method names should not start with capital letters
-</violation>
-<violation beginline="104" endline="104" begincolumn="17" endcolumn="75" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorReservas" method="TestRealizarReserva_4" variable="format" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+<violation beginline="85" endline="85" begincolumn="17" endcolumn="76" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorReservas" method="testRealizarReserva_4" variable="format" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
 Local variable 'format' could be declared final
 </violation>
-<violation beginline="104" endline="104" begincolumn="43" endcolumn="75" rule="SimpleDateFormatNeedsLocale" ruleset="Design" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorReservas" method="TestRealizarReserva_4" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/design.html#SimpleDateFormatNeedsLocale" priority="3">
+<violation beginline="85" endline="85" begincolumn="43" endcolumn="76" rule="SimpleDateFormatNeedsLocale" ruleset="Design" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorReservas" method="testRealizarReserva_4" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/design.html#SimpleDateFormatNeedsLocale" priority="3">
 When instantiating a SimpleDateFormat object, specify a Locale
 </violation>
-<violation beginline="105" endline="105" begincolumn="17" endcolumn="54" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorReservas" method="TestRealizarReserva_4" variable="date" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+<violation beginline="86" endline="86" begincolumn="17" endcolumn="54" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorReservas" method="testRealizarReserva_4" variable="date" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
 Local variable 'date' could be declared final
 </violation>
-<violation beginline="124" endline="147" begincolumn="9" endcolumn="9" rule="DefaultPackage" ruleset="Controversial" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorReservas" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/controversial.html#DefaultPackage" priority="3">
-Use explicit scoping instead of the default package private level
-</violation>
-<violation beginline="125" endline="125" begincolumn="14" endcolumn="36" rule="MethodNamingConventions" ruleset="Naming" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorReservas" method="TestRealizarReserva_5" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#MethodNamingConventions" priority="1">
+<violation beginline="104" endline="104" begincolumn="21" endcolumn="43" rule="MethodNamingConventions" ruleset="Naming" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorReservas" method="testRealizarReserva_5" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#MethodNamingConventions" priority="1">
 Method names should not contain underscores
-</violation>
-<violation beginline="125" endline="125" begincolumn="14" endcolumn="36" rule="MethodNamingConventions" ruleset="Naming" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorReservas" method="TestRealizarReserva_5" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#MethodNamingConventions" priority="1">
-Method names should not start with capital letters
-</violation>
-<violation beginline="129" endline="129" begincolumn="17" endcolumn="75" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorReservas" method="TestRealizarReserva_5" variable="format" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
-Local variable 'format' could be declared final
-</violation>
-<violation beginline="129" endline="129" begincolumn="43" endcolumn="75" rule="SimpleDateFormatNeedsLocale" ruleset="Design" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorReservas" method="TestRealizarReserva_5" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/design.html#SimpleDateFormatNeedsLocale" priority="3">
-When instantiating a SimpleDateFormat object, specify a Locale
-</violation>
-<violation beginline="130" endline="130" begincolumn="17" endcolumn="54" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorReservas" method="TestRealizarReserva_5" variable="date" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
-Local variable 'date' could be declared final
-</violation>
-<violation beginline="149" endline="172" begincolumn="9" endcolumn="9" rule="DefaultPackage" ruleset="Controversial" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorReservas" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/controversial.html#DefaultPackage" priority="3">
-Use explicit scoping instead of the default package private level
-</violation>
-<violation beginline="150" endline="150" begincolumn="14" endcolumn="36" rule="MethodNamingConventions" ruleset="Naming" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorReservas" method="TestRealizarReserva_6" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#MethodNamingConventions" priority="1">
-Method names should not contain underscores
-</violation>
-<violation beginline="150" endline="150" begincolumn="14" endcolumn="36" rule="MethodNamingConventions" ruleset="Naming" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorReservas" method="TestRealizarReserva_6" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#MethodNamingConventions" priority="1">
-Method names should not start with capital letters
-</violation>
-<violation beginline="154" endline="154" begincolumn="17" endcolumn="75" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorReservas" method="TestRealizarReserva_6" variable="format" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
-Local variable 'format' could be declared final
-</violation>
-<violation beginline="154" endline="154" begincolumn="43" endcolumn="75" rule="SimpleDateFormatNeedsLocale" ruleset="Design" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorReservas" method="TestRealizarReserva_6" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/design.html#SimpleDateFormatNeedsLocale" priority="3">
-When instantiating a SimpleDateFormat object, specify a Locale
-</violation>
-<violation beginline="155" endline="155" begincolumn="17" endcolumn="54" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorReservas" method="TestRealizarReserva_6" variable="date" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
-Local variable 'date' could be declared final
-</violation>
-<violation beginline="173" endline="196" begincolumn="9" endcolumn="9" rule="DefaultPackage" ruleset="Controversial" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorReservas" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/controversial.html#DefaultPackage" priority="3">
-Use explicit scoping instead of the default package private level
-</violation>
-<violation beginline="174" endline="174" begincolumn="14" endcolumn="36" rule="MethodNamingConventions" ruleset="Naming" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorReservas" method="TestRealizarReserva_7" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#MethodNamingConventions" priority="1">
-Method names should not contain underscores
-</violation>
-<violation beginline="174" endline="174" begincolumn="14" endcolumn="36" rule="MethodNamingConventions" ruleset="Naming" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorReservas" method="TestRealizarReserva_7" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#MethodNamingConventions" priority="1">
-Method names should not start with capital letters
-</violation>
-<violation beginline="178" endline="178" begincolumn="17" endcolumn="75" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorReservas" method="TestRealizarReserva_7" variable="format" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
-Local variable 'format' could be declared final
-</violation>
-<violation beginline="178" endline="178" begincolumn="43" endcolumn="75" rule="SimpleDateFormatNeedsLocale" ruleset="Design" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorReservas" method="TestRealizarReserva_7" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/design.html#SimpleDateFormatNeedsLocale" priority="3">
-When instantiating a SimpleDateFormat object, specify a Locale
-</violation>
-<violation beginline="179" endline="179" begincolumn="17" endcolumn="54" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorReservas" method="TestRealizarReserva_7" variable="date" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
-Local variable 'date' could be declared final
-</violation>
-<violation beginline="197" endline="220" begincolumn="9" endcolumn="9" rule="DefaultPackage" ruleset="Controversial" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorReservas" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/controversial.html#DefaultPackage" priority="3">
-Use explicit scoping instead of the default package private level
-</violation>
-<violation beginline="198" endline="198" begincolumn="14" endcolumn="36" rule="MethodNamingConventions" ruleset="Naming" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorReservas" method="TestRealizarReserva_8" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#MethodNamingConventions" priority="1">
-Method names should not contain underscores
-</violation>
-<violation beginline="198" endline="198" begincolumn="14" endcolumn="36" rule="MethodNamingConventions" ruleset="Naming" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorReservas" method="TestRealizarReserva_8" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#MethodNamingConventions" priority="1">
-Method names should not start with capital letters
-</violation>
-<violation beginline="202" endline="202" begincolumn="17" endcolumn="75" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorReservas" method="TestRealizarReserva_8" variable="format" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
-Local variable 'format' could be declared final
-</violation>
-<violation beginline="202" endline="202" begincolumn="43" endcolumn="75" rule="SimpleDateFormatNeedsLocale" ruleset="Design" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorReservas" method="TestRealizarReserva_8" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/design.html#SimpleDateFormatNeedsLocale" priority="3">
-When instantiating a SimpleDateFormat object, specify a Locale
-</violation>
-<violation beginline="203" endline="203" begincolumn="17" endcolumn="54" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="es.esi.cr.iso.gestionmesas.controller" class="TestGestorReservas" method="TestRealizarReserva_8" variable="date" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
-Local variable 'date' could be declared final
 </violation>
 </file>
 </pmd>
