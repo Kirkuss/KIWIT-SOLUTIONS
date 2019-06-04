@@ -119,11 +119,11 @@ public class GestorMesas implements Serializable {
 	}
 
 	public EstadoEnum[] getEstados() {
-		return estados;
+		return estados.clone();
 	}
 
 	public void setEstados(EstadoEnum[] estados) {
-		this.estados = estados;
+		this.estados = estados.clone();
 	}
 
 	public Servicio getServicioActivo() {
@@ -135,11 +135,11 @@ public class GestorMesas implements Serializable {
 	}
 
 	public Date getFechaServicio() {
-		return fechaServicio;
+		return new Date(fechaServicio.getTime());
 	}
 
 	public void setFechaServicio(Date fechaServicio) {
-		this.fechaServicio = fechaServicio;
+		this.fechaServicio = new Date(fechaServicio.getTime());
 	}
 
 	public boolean isComidaServicio() {
@@ -159,7 +159,7 @@ public class GestorMesas implements Serializable {
 	}
 	
     public void setUltimoEstadoMesa(int [] valor) {
-		this.ultimoEstadoMesa = valor;
+		this.ultimoEstadoMesa = valor.clone();
 	}
     
     public void setServicioDao(ServicioDao servDao)

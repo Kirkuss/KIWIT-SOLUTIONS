@@ -16,16 +16,8 @@ public enum SourceConcernEnum {
 		return identificator;
 	}
 
-	public void setId(int id) {
-		this.identificator = id;
-	}
-
 	public String getLabel() {
 		return label;
-	}
-
-	public void setLabel(String label) {
-		this.label = label;
 	}
 	
 }

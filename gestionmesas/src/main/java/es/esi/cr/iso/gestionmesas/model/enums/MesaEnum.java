@@ -16,18 +16,8 @@ public enum MesaEnum {
 		return identificator;
 	}
 
-	public void setId(int id) {
-		this.identificator = id;
-	}
-
 	public int getComensales() {
 		return comensales;
 	}
-
-	public void setComensales(int comensales) {
-		this.comensales = comensales;
-	}
-
-	
 
 }

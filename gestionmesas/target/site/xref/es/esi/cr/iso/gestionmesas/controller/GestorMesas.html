@@ -127,11 +127,11 @@
 <a class="jxr_linenumber" name="L119" href="#L119">119</a> 	}
 <a class="jxr_linenumber" name="L120" href="#L120">120</a> 
 <a class="jxr_linenumber" name="L121" href="#L121">121</a> 	<strong class="jxr_keyword">public</strong> <a href="../../../../../../es/esi/cr/iso/gestionmesas/model/enums/EstadoEnum.html">EstadoEnum</a>[] getEstados() {
-<a class="jxr_linenumber" name="L122" href="#L122">122</a> 		<strong class="jxr_keyword">return</strong> estados;
+<a class="jxr_linenumber" name="L122" href="#L122">122</a> 		<strong class="jxr_keyword">return</strong> estados.clone();
 <a class="jxr_linenumber" name="L123" href="#L123">123</a> 	}
 <a class="jxr_linenumber" name="L124" href="#L124">124</a> 
 <a class="jxr_linenumber" name="L125" href="#L125">125</a> 	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> setEstados(<a href="../../../../../../es/esi/cr/iso/gestionmesas/model/enums/EstadoEnum.html">EstadoEnum</a>[] estados) {
-<a class="jxr_linenumber" name="L126" href="#L126">126</a> 		<strong class="jxr_keyword">this</strong>.estados = estados;
+<a class="jxr_linenumber" name="L126" href="#L126">126</a> 		<strong class="jxr_keyword">this</strong>.estados = estados.clone();
 <a class="jxr_linenumber" name="L127" href="#L127">127</a> 	}
 <a class="jxr_linenumber" name="L128" href="#L128">128</a> 
 <a class="jxr_linenumber" name="L129" href="#L129">129</a> 	<strong class="jxr_keyword">public</strong> <a href="../../../../../../es/esi/cr/iso/gestionmesas/model/Servicio.html">Servicio</a> getServicioActivo() {
@@ -143,11 +143,11 @@
 <a class="jxr_linenumber" name="L135" href="#L135">135</a> 	}
 <a class="jxr_linenumber" name="L136" href="#L136">136</a> 
 <a class="jxr_linenumber" name="L137" href="#L137">137</a> 	<strong class="jxr_keyword">public</strong> Date getFechaServicio() {
-<a class="jxr_linenumber" name="L138" href="#L138">138</a> 		<strong class="jxr_keyword">return</strong> fechaServicio;
+<a class="jxr_linenumber" name="L138" href="#L138">138</a> 		<strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> Date(fechaServicio.getTime());
 <a class="jxr_linenumber" name="L139" href="#L139">139</a> 	}
 <a class="jxr_linenumber" name="L140" href="#L140">140</a> 
 <a class="jxr_linenumber" name="L141" href="#L141">141</a> 	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> setFechaServicio(Date fechaServicio) {
-<a class="jxr_linenumber" name="L142" href="#L142">142</a> 		<strong class="jxr_keyword">this</strong>.fechaServicio = fechaServicio;
+<a class="jxr_linenumber" name="L142" href="#L142">142</a> 		<strong class="jxr_keyword">this</strong>.fechaServicio = <strong class="jxr_keyword">new</strong> Date(fechaServicio.getTime());
 <a class="jxr_linenumber" name="L143" href="#L143">143</a> 	}
 <a class="jxr_linenumber" name="L144" href="#L144">144</a> 
 <a class="jxr_linenumber" name="L145" href="#L145">145</a> 	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">boolean</strong> isComidaServicio() {
@@ -167,7 +167,7 @@
 <a class="jxr_linenumber" name="L159" href="#L159">159</a> 	}
 <a class="jxr_linenumber" name="L160" href="#L160">160</a> 	
 <a class="jxr_linenumber" name="L161" href="#L161">161</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> setUltimoEstadoMesa(<strong class="jxr_keyword">int</strong> [] valor) {
-<a class="jxr_linenumber" name="L162" href="#L162">162</a> 		<strong class="jxr_keyword">this</strong>.ultimoEstadoMesa = valor;
+<a class="jxr_linenumber" name="L162" href="#L162">162</a> 		<strong class="jxr_keyword">this</strong>.ultimoEstadoMesa = valor.clone();
 <a class="jxr_linenumber" name="L163" href="#L163">163</a> 	}
 <a class="jxr_linenumber" name="L164" href="#L164">164</a>     
 <a class="jxr_linenumber" name="L165" href="#L165">165</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> setServicioDao(<a href="../../../../../../es/esi/cr/iso/gestionmesas/persistency/ServicioDao.html">ServicioDao</a> servDao)

@@ -25,31 +25,19 @@ public enum SourceEnum {
 		this.identificator = identificator;
 		this.sourceConcern = sourceConcern;
 		this.label = label;
-		this.setExtensions(extensions);
+		this.extensions = extensions;
 	}
 
 	public int getId() {
 		return identificator;
 	}
 
-	public void setId(int id) {
-		this.identificator = id;
-	}
-
 	public String getLabel() {
 		return label;
 	}
 
-	public void setLabel(String label) {
-		this.label = label;
-	}
-
 	public SourceConcernEnum getSourceConcern() {
 		return sourceConcern;
-	}
-
-	public void setSourceConcern(SourceConcernEnum sourceConcern) {
-		this.sourceConcern = sourceConcern;
 	}
 
 	public List<String> getExtensions() {
@@ -58,10 +46,6 @@ public enum SourceEnum {
 
 	public String getFormattedExtensions() {
 		return CollectionUtils.isEmpty(extensions) ? "" : extensions.stream().collect(joining(", *.", "(*.", ")"));
-	}
-
-	public void setExtensions(List<String> extensions) {
-		this.extensions = extensions;
 	}
 
 }

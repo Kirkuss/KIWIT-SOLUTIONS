@@ -35,11 +35,11 @@ public abstract class AbstractEntity implements Serializable, Comparable<Abstrac
 	}
 
 	public Timestamp getFecha() {
-		return fecha;
+		return new Timestamp(fecha.getTime());
 	}
 
 	public void setFecha(Timestamp fecha) {
-		this.fecha = fecha;
+		this.fecha = new Timestamp(fecha.getTime());
 	}
 
 	@Override

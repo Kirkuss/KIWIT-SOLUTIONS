@@ -100,8 +100,10 @@ public class TestGestorReservas {
 	
 	@Test
 	public void testRealizarReserva5() throws ParseException {
+		SimpleDateFormat format = new SimpleDateFormat("dd-mm-yyyy", java.util.Locale.getDefault());
+		Date date = format.parse("29-05-2019");
 		
-		gestor.setFechaReserva(null);
+		gestor.setFechaReserva(date);
 		gestor.setComidaReserva(false);
 		gestor.setTurnoReserva(-5);
 		gestor.setMesaReserva(4);

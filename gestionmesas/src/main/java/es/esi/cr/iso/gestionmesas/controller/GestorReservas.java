@@ -73,11 +73,11 @@ public class GestorReservas implements Serializable {
 	}
 	
 	public Date getFechaReserva() {
-		return fechaReserva;
+		return new Date(fechaReserva.getTime());
 	}
 
 	public void setFechaReserva(Date fechaReserva) {
-		this.fechaReserva = fechaReserva;
+		this.fechaReserva = new Date(fechaReserva.getTime());
 	}
 
 	public boolean isComidaReserva() {

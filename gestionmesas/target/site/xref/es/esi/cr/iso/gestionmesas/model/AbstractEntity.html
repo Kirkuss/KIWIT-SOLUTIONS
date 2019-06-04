@@ -43,11 +43,11 @@
 <a class="jxr_linenumber" name="L35" href="#L35">35</a>  	}
 <a class="jxr_linenumber" name="L36" href="#L36">36</a>  
 <a class="jxr_linenumber" name="L37" href="#L37">37</a>  	<strong class="jxr_keyword">public</strong> Timestamp getFecha() {
-<a class="jxr_linenumber" name="L38" href="#L38">38</a>  		<strong class="jxr_keyword">return</strong> fecha;
+<a class="jxr_linenumber" name="L38" href="#L38">38</a>  		<strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> Timestamp(fecha.getTime());
 <a class="jxr_linenumber" name="L39" href="#L39">39</a>  	}
 <a class="jxr_linenumber" name="L40" href="#L40">40</a>  
 <a class="jxr_linenumber" name="L41" href="#L41">41</a>  	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> setFecha(Timestamp fecha) {
-<a class="jxr_linenumber" name="L42" href="#L42">42</a>  		<strong class="jxr_keyword">this</strong>.fecha = fecha;
+<a class="jxr_linenumber" name="L42" href="#L42">42</a>  		<strong class="jxr_keyword">this</strong>.fecha = <strong class="jxr_keyword">new</strong> Timestamp(fecha.getTime());
 <a class="jxr_linenumber" name="L43" href="#L43">43</a>  	}
 <a class="jxr_linenumber" name="L44" href="#L44">44</a>  
 <a class="jxr_linenumber" name="L45" href="#L45">45</a>  	@Override

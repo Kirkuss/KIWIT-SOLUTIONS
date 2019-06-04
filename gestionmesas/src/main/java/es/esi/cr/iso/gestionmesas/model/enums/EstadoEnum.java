@@ -17,17 +17,9 @@ public enum EstadoEnum {
 	public int getId() {
 		return identificator;
 	}
-
-	public void setId(int id) {
-		this.identificator = id;
-	}
-
+	
 	public String getDescripcion() {
 		return descripcion;
-	}
-
-	public void setDescripcion(String descripcion) {
-		this.descripcion = descripcion;
 	}
 
 }
