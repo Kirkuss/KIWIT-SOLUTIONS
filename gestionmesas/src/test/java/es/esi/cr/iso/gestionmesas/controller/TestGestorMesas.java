@@ -80,8 +80,10 @@ public class TestGestorMesas {
 	
 	@Test
 	public void testDefinirServicio_4() throws ParseException {
-	
-		gm.setFechaServicio(null);
+	    SimpleDateFormat format = new SimpleDateFormat("dd-mm-yyyy");
+        Date date = format.parse("29-05-2019");
+        
+        gm.setFechaServicio(date);
 		gm.setComidaServicio(false);
 		gm.setTurnoServicio(10);
 		
