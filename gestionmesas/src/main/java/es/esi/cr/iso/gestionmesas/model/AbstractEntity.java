@@ -18,7 +18,7 @@ public abstract class AbstractEntity implements Serializable, Comparable<Abstrac
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "id")
-	protected Long id;
+	protected Long identificator;
 
 	@Column(name = "fecha")
 	protected Timestamp fecha;
@@ -27,11 +27,11 @@ public abstract class AbstractEntity implements Serializable, Comparable<Abstrac
 	protected Long version;
 
 	public Long getId() {
-		return id;
+		return identificator;
 	}
-
+	
 	public void setId(Long id) {
-		this.id = id;
+		this.identificator = id;
 	}
 
 	public Timestamp getFecha() {
@@ -44,17 +44,22 @@ public abstract class AbstractEntity implements Serializable, Comparable<Abstrac
 
 	@Override
 	public String toString() {
-		return "AbstractEntity [id=" + id + ", fecha=" + fecha + ", version=" + version + "]";
+		return "AbstractEntity [id=" + identificator + ", fecha=" + fecha + ", version=" + version + "]";
 	}
 
 	@Override
 	public int compareTo(AbstractEntity o) {
+		int value;
+		
 		if (o == null || o.getId() == null) {
-			return 1;
+			value = 1;
 		} else if (getId() == null) {
-			return -1;
+			value = -1;
+		}else {
+			value = getId().compareTo(o.getId());
 		}
-		return getId().compareTo(o.getId());
+		
+		return value;
 	}
 
 }

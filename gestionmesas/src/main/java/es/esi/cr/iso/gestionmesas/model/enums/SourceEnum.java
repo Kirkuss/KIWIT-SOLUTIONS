@@ -12,28 +12,28 @@ public enum SourceEnum {
 	WEB_APP(1, SourceConcernEnum.APPLICATION, "Web application", Arrays.asList("ear", "war", "jar")), JPA(1,
 			SourceConcernEnum.APPLICATION, "JPA config");
 
-	private int id;
+	private int identificator;
 	private SourceConcernEnum sourceConcern;
 	private String label;
 	private List<String> extensions;
 
-	private SourceEnum(int id, SourceConcernEnum sourceConcern, String label) {
-		this(id, sourceConcern, label, null);
+	private SourceEnum(int identificator, SourceConcernEnum sourceConcern, String label) {
+		this(identificator, sourceConcern, label, null);
 	}
 
-	private SourceEnum(int id, SourceConcernEnum sourceConcern, String label, List<String> extensions) {
-		this.id = id;
+	private SourceEnum(int identificator, SourceConcernEnum sourceConcern, String label, List<String> extensions) {
+		this.identificator = identificator;
 		this.sourceConcern = sourceConcern;
 		this.label = label;
 		this.setExtensions(extensions);
 	}
 
 	public int getId() {
-		return id;
+		return identificator;
 	}
 
 	public void setId(int id) {
-		this.id = id;
+		this.identificator = id;
 	}
 
 	public String getLabel() {

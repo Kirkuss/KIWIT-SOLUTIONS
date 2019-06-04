@@ -29,11 +29,11 @@ public class GestorMesas implements Serializable {
 
     private static final long serialVersionUID = 1220451072138440791L;
 
-	static Logger LOGGER = LoggerFactory.getLogger(GestorMesas.class);
+	final static Logger LOGGER = LoggerFactory.getLogger(GestorMesas.class);
 
 	@Autowired
 	private ServicioDao servicioDao;
-
+	
 	private EstadoEnum[] estados;
 
 	private Servicio servicioActivo;
@@ -91,23 +91,31 @@ public class GestorMesas implements Serializable {
 	}
 
 	public String getStyleClass(int mesaId, int estadoId) {
+		String estado;
+		
 		if (EstadoEnum.values().length - 1 == ultimoEstadoMesa[mesaId - 1] && estadoId==0) {
-			return "estado-futuro";
+			estado =  "estado-futuro";
 		}else if (estadoId > ultimoEstadoMesa[mesaId - 1]) {
-			return "estado-futuro";
+			estado = "estado-futuro";
 		} else if (estadoId < ultimoEstadoMesa[mesaId - 1]) {
-			return "estado-pasado";
+			estado = "estado-pasado";
 		} else {
-			return "estado-actual";
+			estado = "estado-actual";
 		}
+		
+		return estado;
 	}
 	
 	public boolean isEnabled(int mesaId, int estadoId) {
+		boolean enabled;
+		
 		if (EstadoEnum.values().length - 1 == ultimoEstadoMesa[mesaId - 1] && estadoId==0) {
-			return true;
+			enabled = true;
 		} else {
-			return servicioActivo != null && estadoId >= ultimoEstadoMesa[mesaId - 1]; 
+			enabled = servicioActivo != null && estadoId >= ultimoEstadoMesa[mesaId - 1]; 
 		}
+		
+		return enabled;
 	}
 
 	public EstadoEnum[] getEstados() {
@@ -154,9 +162,9 @@ public class GestorMesas implements Serializable {
 		this.ultimoEstadoMesa = valor;
 	}
     
-    public void setServicioDao(ServicioDao sd)
+    public void setServicioDao(ServicioDao servDao)
     {
-    	this.servicioDao = sd;
+    	this.servicioDao = servDao;
     }
 
 }

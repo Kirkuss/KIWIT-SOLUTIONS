@@ -4,20 +4,20 @@ public enum SourceConcernEnum {
 	
 	APPLICATION(1, "Applications"), SERVICE(2, "Services"), PROCESS(3, "Processes");
 	
-	private int id;
+	private int identificator;
 	private String label;
 	
-	private SourceConcernEnum(int id, String label) {
-		this.id=id;
+	private SourceConcernEnum(int identificator, String label) {
+		this.identificator=identificator;
 		this.label=label;
 	}
 
 	public int getId() {
-		return id;
+		return identificator;
 	}
 
 	public void setId(int id) {
-		this.id = id;
+		this.identificator = id;
 	}
 
 	public String getLabel() {

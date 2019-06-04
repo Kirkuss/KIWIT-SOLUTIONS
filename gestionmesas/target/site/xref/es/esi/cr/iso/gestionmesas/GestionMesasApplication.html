@@ -36,7 +36,7 @@
 <a class="jxr_linenumber" name="L28" href="#L28">28</a>  		<strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> ServletContextInitializer() {
 <a class="jxr_linenumber" name="L29" href="#L29">29</a>  			@Override
 <a class="jxr_linenumber" name="L30" href="#L30">30</a>  			<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> onStartup(ServletContext servletContext) <strong class="jxr_keyword">throws</strong> ServletException {
-<a class="jxr_linenumber" name="L31" href="#L31">31</a>  				servletContext.setInitParameter(<span class="jxr_string">"primefaces.FONT_AWESOME"</span>, Boolean.TRUE.toString());
+<a class="jxr_linenumber" name="L31" href="#L31">31</a>  				servletContext.setInitParameter(<span class="jxr_string">"primefaces.FONT_AWESOME"</span>, Boolean.toString(<strong class="jxr_keyword">true</strong>));
 <a class="jxr_linenumber" name="L32" href="#L32">32</a>  				servletContext.setInitParameter(<span class="jxr_string">"primefaces.THEME"</span>, <span class="jxr_string">"bootstrap"</span>);
 <a class="jxr_linenumber" name="L33" href="#L33">33</a>  				servletContext.setInitParameter(<span class="jxr_string">"javax.faces.STATE_SAVING_METHOD"</span>, <span class="jxr_string">"server"</span>);
 <a class="jxr_linenumber" name="L34" href="#L34">34</a>  			}

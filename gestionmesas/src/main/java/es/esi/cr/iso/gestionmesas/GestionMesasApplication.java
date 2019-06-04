@@ -28,7 +28,7 @@ public class GestionMesasApplication extends SpringBootServletInitializer {
 		return new ServletContextInitializer() {
 			@Override
 			public void onStartup(ServletContext servletContext) throws ServletException {
-				servletContext.setInitParameter("primefaces.FONT_AWESOME", Boolean.TRUE.toString());
+				servletContext.setInitParameter("primefaces.FONT_AWESOME", Boolean.toString(true));
 				servletContext.setInitParameter("primefaces.THEME", "bootstrap");
 				servletContext.setInitParameter("javax.faces.STATE_SAVING_METHOD", "server");
 			}

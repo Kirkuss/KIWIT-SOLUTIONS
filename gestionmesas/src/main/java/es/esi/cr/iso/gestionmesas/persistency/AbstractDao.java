@@ -55,6 +55,7 @@ public class AbstractDao<T extends AbstractEntity> implements Serializable {
 	}
 
 	public T persistOrUpdate(T entity) {
+		
 		if (entity.getId() == null) {
 			persist(entity);
 			return null;

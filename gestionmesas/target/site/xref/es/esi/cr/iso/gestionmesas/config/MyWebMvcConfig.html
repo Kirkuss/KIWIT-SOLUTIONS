@@ -37,12 +37,12 @@
 <a class="jxr_linenumber" name="L29" href="#L29">29</a>  
 <a class="jxr_linenumber" name="L30" href="#L30">30</a>      @Bean
 <a class="jxr_linenumber" name="L31" href="#L31">31</a>      <strong class="jxr_keyword">public</strong> FilterRegistrationBean disableSpringBootErrorFilter(ErrorPageFilter filter) {
-<a class="jxr_linenumber" name="L32" href="#L32">32</a>          FilterRegistrationBean filterRegistrationBean = <strong class="jxr_keyword">new</strong> FilterRegistrationBean();
-<a class="jxr_linenumber" name="L33" href="#L33">33</a>          filterRegistrationBean.setFilter(filter);
-<a class="jxr_linenumber" name="L34" href="#L34">34</a>          filterRegistrationBean.setEnabled(false);
-<a class="jxr_linenumber" name="L35" href="#L35">35</a>          <strong class="jxr_keyword">return</strong> filterRegistrationBean;
+<a class="jxr_linenumber" name="L32" href="#L32">32</a>          FilterRegistrationBean filterRegBean = <strong class="jxr_keyword">new</strong> FilterRegistrationBean();
+<a class="jxr_linenumber" name="L33" href="#L33">33</a>          filterRegBean.setFilter(filter);
+<a class="jxr_linenumber" name="L34" href="#L34">34</a>          filterRegBean.setEnabled(false);
+<a class="jxr_linenumber" name="L35" href="#L35">35</a>          <strong class="jxr_keyword">return</strong> filterRegBean;
 <a class="jxr_linenumber" name="L36" href="#L36">36</a>      }
-<a class="jxr_linenumber" name="L37" href="#L37">37</a>  
+<a class="jxr_linenumber" name="L37" href="#L37">37</a>      
 <a class="jxr_linenumber" name="L38" href="#L38">38</a>  }
 </pre>
 <hr/>

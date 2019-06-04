@@ -9,30 +9,28 @@ import java.util.Date;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import es.esi.cr.iso.gestionmesas.controller.GestorReservas;
-
 public class TestGestorReservas {
 
-	private GestorReservas gr;
+	private GestorReservas gestor;
 	
 	@BeforeEach
 	public void setUp() throws Exception {
-		gr = new GestorReservas();
+		gestor = new GestorReservas();
 	}
 
 	@Test
-	public void testRealizarReserva_1() throws ParseException {
-		SimpleDateFormat format = new SimpleDateFormat("dd-mm-yyyy");
+	public void testRealizarReserva1() throws ParseException {
+		SimpleDateFormat format = new SimpleDateFormat("dd-mm-yyyy", java.util.Locale.getDefault());
 		Date date = format.parse("29-05-2019");
 		
-		gr.setFechaReserva(date);
-		gr.setComidaReserva(false);
-		gr.setTurnoReserva(0);
-		gr.setMesaReserva(-2);
-		gr.setNombreReserva("Reserva de Daniel");
+		gestor.setFechaReserva(date);
+		gestor.setComidaReserva(false);
+		gestor.setTurnoReserva(0);
+		gestor.setMesaReserva(-2);
+		gestor.setNombreReserva("Reserva de Daniel");
 		
 		try {
-			gr.realizarReserva();
+			gestor.realizarReserva();
 			fail("An error was expected");
 		}catch(Exception e) {
 			System.out.println(new Throwable().getStackTrace()[0].getMethodName());
@@ -41,18 +39,18 @@ public class TestGestorReservas {
 	}
 	
 	@Test
-	public void testRealizarReserva_2() throws ParseException {
-		SimpleDateFormat format = new SimpleDateFormat("dd-mm-yyyy");
+	public void testRealizarReserva2() throws ParseException {
+		SimpleDateFormat format = new SimpleDateFormat("dd-mm-yyyy", java.util.Locale.getDefault());
 		Date date = format.parse("29-05-2019");
 		
-		gr.setFechaReserva(date);
-		gr.setComidaReserva(true);
-		gr.setTurnoReserva(1);
-		gr.setMesaReserva(2);
-		gr.setNombreReserva("Reserva de Raquel");
+		gestor.setFechaReserva(date);
+		gestor.setComidaReserva(true);
+		gestor.setTurnoReserva(1);
+		gestor.setMesaReserva(2);
+		gestor.setNombreReserva("Reserva de Raquel");
 		
 		try {
-			gr.realizarReserva();
+			gestor.realizarReserva();
 		}catch(Exception e) {
 			fail("The error was not expected");
 			System.out.println(new Throwable().getStackTrace()[0].getMethodName());
@@ -61,18 +59,18 @@ public class TestGestorReservas {
 	}
 	
 	@Test
-	public void testRealizarReserva_3() throws ParseException {
-		SimpleDateFormat format = new SimpleDateFormat("dd-mm-yyyy");
+	public void testRealizarReserva3() throws ParseException {
+		SimpleDateFormat format = new SimpleDateFormat("dd-mm-yyyy", java.util.Locale.getDefault());
 		Date date = format.parse("29-05-2019");
 		
-		gr.setFechaReserva(date);
-		gr.setComidaReserva(false);
-		gr.setTurnoReserva(2);
-		gr.setMesaReserva(10);
-		gr.setNombreReserva(null);
+		gestor.setFechaReserva(date);
+		gestor.setComidaReserva(false);
+		gestor.setTurnoReserva(2);
+		gestor.setMesaReserva(10);
+		gestor.setNombreReserva(null);
 		
 		try {
-			gr.realizarReserva();
+			gestor.realizarReserva();
 			fail("An error was expected");
 		}catch(Exception e) {
 			System.out.println(new Throwable().getStackTrace()[0].getMethodName());
@@ -81,18 +79,18 @@ public class TestGestorReservas {
 	}
 	
 	@Test
-	public void testRealizarReserva_4() throws ParseException {
-		SimpleDateFormat format = new SimpleDateFormat("dd-mm-yyyy");
+	public void testRealizarReserva4() throws ParseException {
+		SimpleDateFormat format = new SimpleDateFormat("dd-mm-yyyy", java.util.Locale.getDefault());
 		Date date = format.parse("29-05-2019");
 		
-		gr.setFechaReserva(date);
-		gr.setComidaReserva(true);
-		gr.setTurnoReserva(20);
-		gr.setMesaReserva(0);
-		gr.setNombreReserva("Reserva de Enrique");
+		gestor.setFechaReserva(date);
+		gestor.setComidaReserva(true);
+		gestor.setTurnoReserva(20);
+		gestor.setMesaReserva(0);
+		gestor.setNombreReserva("Reserva de Enrique");
 		
 		try {
-			gr.realizarReserva();
+			gestor.realizarReserva();
 			fail("An error was expected");
 		}catch(Exception e) {
 			System.out.println(new Throwable().getStackTrace()[0].getMethodName());
@@ -101,16 +99,16 @@ public class TestGestorReservas {
 	}
 	
 	@Test
-	public void testRealizarReserva_5() throws ParseException {
+	public void testRealizarReserva5() throws ParseException {
 		
-		gr.setFechaReserva(null);
-		gr.setComidaReserva(false);
-		gr.setTurnoReserva(-5);
-		gr.setMesaReserva(4);
-		gr.setNombreReserva("Reserva de Samuel");
+		gestor.setFechaReserva(null);
+		gestor.setComidaReserva(false);
+		gestor.setTurnoReserva(-5);
+		gestor.setMesaReserva(4);
+		gestor.setNombreReserva("Reserva de Samuel");
 		
 		try {
-			gr.realizarReserva();
+			gestor.realizarReserva();
 			fail("An error was expected");
 		}catch(Exception e) {
 			System.out.println(new Throwable().getStackTrace()[0].getMethodName());

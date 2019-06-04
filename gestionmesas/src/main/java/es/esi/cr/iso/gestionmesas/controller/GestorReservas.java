@@ -28,7 +28,7 @@ public class GestorReservas implements Serializable {
 
 	private static final long serialVersionUID = -6274199558088278143L;
 
-	static Logger LOGGER = LoggerFactory.getLogger(GestorReservas.class);
+	final static Logger LOGGER = LoggerFactory.getLogger(GestorReservas.class);
 
 	@Autowired
 	private ReservaDao reservaDao;

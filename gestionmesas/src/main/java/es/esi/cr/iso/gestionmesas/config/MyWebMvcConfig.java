@@ -29,10 +29,10 @@ public class MyWebMvcConfig {
 
     @Bean
     public FilterRegistrationBean disableSpringBootErrorFilter(ErrorPageFilter filter) {
-        FilterRegistrationBean filterRegistrationBean = new FilterRegistrationBean();
-        filterRegistrationBean.setFilter(filter);
-        filterRegistrationBean.setEnabled(false);
-        return filterRegistrationBean;
+        FilterRegistrationBean filterRegBean = new FilterRegistrationBean();
+        filterRegBean.setFilter(filter);
+        filterRegBean.setEnabled(false);
+        return filterRegBean;
     }
-
+    
 }

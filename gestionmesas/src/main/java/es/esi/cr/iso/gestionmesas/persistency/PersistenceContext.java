@@ -33,10 +33,10 @@ class PersistenceContext {
 
 	@Bean
 	LocalContainerEntityManagerFactoryBean entityManagerFactory(DataSource dataSource, Environment env) {
-		LocalContainerEntityManagerFactoryBean entityManagerFactoryBean = new LocalContainerEntityManagerFactoryBean();
-		entityManagerFactoryBean.setDataSource(dataSource);
-		entityManagerFactoryBean.setJpaVendorAdapter(new HibernateJpaVendorAdapter());
-		entityManagerFactoryBean.setPackagesToScan("es.esi.cr.iso.gestionmesas.model");
+		LocalContainerEntityManagerFactoryBean entityManFacBean = new LocalContainerEntityManagerFactoryBean();
+		entityManFacBean.setDataSource(dataSource);
+		entityManFacBean.setJpaVendorAdapter(new HibernateJpaVendorAdapter());
+		entityManFacBean.setPackagesToScan("es.esi.cr.iso.gestionmesas.model");
 
 		Properties jpaProperties = new Properties();
 
@@ -64,16 +64,16 @@ class PersistenceContext {
 		
 		jpaProperties.put("hibernate.event.merge.entity_copy_observer", env.getRequiredProperty("hibernate.event.merge.entity_copy_observer"));
 
-		entityManagerFactoryBean.setJpaProperties(jpaProperties);
+		entityManFacBean.setJpaProperties(jpaProperties);
 
-		return entityManagerFactoryBean;
+		return entityManFacBean;
 	}
 
 	@Bean
-	JpaTransactionManager transactionManager(EntityManagerFactory entityManagerFactory) {
-		JpaTransactionManager transactionManager = new JpaTransactionManager();
-		transactionManager.setEntityManagerFactory(entityManagerFactory);
-		return transactionManager;
+	JpaTransactionManager transactionManager(EntityManagerFactory entityManFact) {
+		JpaTransactionManager transManager = new JpaTransactionManager();
+		transManager.setEntityManagerFactory(entityManFact);
+		return transManager;
 	}
 
 	// Add the other beans here

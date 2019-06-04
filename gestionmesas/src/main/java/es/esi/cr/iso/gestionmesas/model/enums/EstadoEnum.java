@@ -6,20 +6,20 @@ public enum EstadoEnum {
 			"Esperando Comida"), SERVIDOS(5, "Servidos"), ESPERANDO_CUENTA(6,
 					"Esperando Cuenta"), PAGANDO(7, "Pagando"), EN_PREPARACION(8, "En Preparación");
 
-	private int id;
+	private int identificator;
 	private String descripcion;
 
-	private EstadoEnum(int id, String descripcion) {
-		this.id = id;
+	private EstadoEnum(int identificator, String descripcion) {
+		this.identificator = identificator;
 		this.descripcion = descripcion;
 	}
 
 	public int getId() {
-		return id;
+		return identificator;
 	}
 
 	public void setId(int id) {
-		this.id = id;
+		this.identificator = id;
 	}
 
 	public String getDescripcion() {

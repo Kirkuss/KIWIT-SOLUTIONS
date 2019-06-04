@@ -63,23 +63,24 @@
 <a class="jxr_linenumber" name="L55" href="#L55">55</a>  	}
 <a class="jxr_linenumber" name="L56" href="#L56">56</a>  
 <a class="jxr_linenumber" name="L57" href="#L57">57</a>  	<strong class="jxr_keyword">public</strong> T persistOrUpdate(T entity) {
-<a class="jxr_linenumber" name="L58" href="#L58">58</a>  		<strong class="jxr_keyword">if</strong> (entity.getId() == <strong class="jxr_keyword">null</strong>) {
-<a class="jxr_linenumber" name="L59" href="#L59">59</a>  			persist(entity);
-<a class="jxr_linenumber" name="L60" href="#L60">60</a>  			<strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">null</strong>;
-<a class="jxr_linenumber" name="L61" href="#L61">61</a>  		} <strong class="jxr_keyword">else</strong> {
-<a class="jxr_linenumber" name="L62" href="#L62">62</a>  			<strong class="jxr_keyword">return</strong> update(entity);
-<a class="jxr_linenumber" name="L63" href="#L63">63</a>  		}
-<a class="jxr_linenumber" name="L64" href="#L64">64</a>  	}
-<a class="jxr_linenumber" name="L65" href="#L65">65</a>  
-<a class="jxr_linenumber" name="L66" href="#L66">66</a>  	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> remove(T entity) {
-<a class="jxr_linenumber" name="L67" href="#L67">67</a>  		entityManager.remove(entityManager.contains(entity) ? entity : entityManager.merge(entity));
-<a class="jxr_linenumber" name="L68" href="#L68">68</a>  	}
-<a class="jxr_linenumber" name="L69" href="#L69">69</a>  
-<a class="jxr_linenumber" name="L70" href="#L70">70</a>  	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> removeById(Long entityId) {
-<a class="jxr_linenumber" name="L71" href="#L71">71</a>  		T entity = findById(entityId);
-<a class="jxr_linenumber" name="L72" href="#L72">72</a>  		remove(entity);
-<a class="jxr_linenumber" name="L73" href="#L73">73</a>  	}
-<a class="jxr_linenumber" name="L74" href="#L74">74</a>  }
+<a class="jxr_linenumber" name="L58" href="#L58">58</a>  		
+<a class="jxr_linenumber" name="L59" href="#L59">59</a>  		<strong class="jxr_keyword">if</strong> (entity.getId() == <strong class="jxr_keyword">null</strong>) {
+<a class="jxr_linenumber" name="L60" href="#L60">60</a>  			persist(entity);
+<a class="jxr_linenumber" name="L61" href="#L61">61</a>  			<strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">null</strong>;
+<a class="jxr_linenumber" name="L62" href="#L62">62</a>  		} <strong class="jxr_keyword">else</strong> {
+<a class="jxr_linenumber" name="L63" href="#L63">63</a>  			<strong class="jxr_keyword">return</strong> update(entity);
+<a class="jxr_linenumber" name="L64" href="#L64">64</a>  		}
+<a class="jxr_linenumber" name="L65" href="#L65">65</a>  	}
+<a class="jxr_linenumber" name="L66" href="#L66">66</a>  
+<a class="jxr_linenumber" name="L67" href="#L67">67</a>  	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> remove(T entity) {
+<a class="jxr_linenumber" name="L68" href="#L68">68</a>  		entityManager.remove(entityManager.contains(entity) ? entity : entityManager.merge(entity));
+<a class="jxr_linenumber" name="L69" href="#L69">69</a>  	}
+<a class="jxr_linenumber" name="L70" href="#L70">70</a>  
+<a class="jxr_linenumber" name="L71" href="#L71">71</a>  	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> removeById(Long entityId) {
+<a class="jxr_linenumber" name="L72" href="#L72">72</a>  		T entity = findById(entityId);
+<a class="jxr_linenumber" name="L73" href="#L73">73</a>  		remove(entity);
+<a class="jxr_linenumber" name="L74" href="#L74">74</a>  	}
+<a class="jxr_linenumber" name="L75" href="#L75">75</a>  }
 </pre>
 <hr/>
 <div id="footer">Copyright &#169; 2016&#x2013;2019 <a href="http://joinfaces.org">JoinFaces</a>. All rights reserved.</div>
